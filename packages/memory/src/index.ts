@@ -652,7 +652,7 @@ export class Memory extends MastraMemory {
     if (typeof message?.content === `string`) {
       return {
         ...message,
-        content: message.content.replace(workingMemoryRegex, ``).trim(),
+        content: message.content.replace(workingMemoryRegex, ``),
       };
     } else if (Array.isArray(message?.content)) {
       // Filter out updateWorkingMemory tool-call/result content items
@@ -665,7 +665,7 @@ export class Memory extends MastraMemory {
         if (content.type === 'text') {
           return {
             ...content,
-            text: content.text.replace(workingMemoryRegex, '').trim(),
+            text: content.text.replace(workingMemoryRegex, ''),
           };
         }
         return { ...content };
@@ -682,7 +682,7 @@ export class Memory extends MastraMemory {
     const newMessage = { ...message, content: { ...message.content } }; // Deep copy message and content
 
     if (newMessage.content.content && typeof newMessage.content.content === 'string') {
-      newMessage.content.content = newMessage.content.content.replace(workingMemoryRegex, '').trim();
+      newMessage.content.content = newMessage.content.content.replace(workingMemoryRegex, '');
     }
 
     if (newMessage.content.parts) {
@@ -697,7 +697,7 @@ export class Memory extends MastraMemory {
           if (part.type === 'text') {
             return {
               ...part,
-              text: part.text.replace(workingMemoryRegex, '').trim(),
+              text: part.text.replace(workingMemoryRegex, ''),
             };
           }
           return part;
