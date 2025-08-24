@@ -1,5 +1,529 @@
 # @mastra/deployer-netlify
 
+## 0.11.15
+
+### Patch Changes
+
+- Updated dependencies [[`6e7e120`](https://github.com/mastra-ai/mastra/commit/6e7e1207d6e8d8b838f9024f90bd10df1181ba27), [`4c8956f`](https://github.com/mastra-ai/mastra/commit/4c8956f3110ccf39595e022f127a44a0a5c09c86), [`0f00e17`](https://github.com/mastra-ai/mastra/commit/0f00e172953ccdccadb35ed3d70f5e4d89115869), [`217cd7a`](https://github.com/mastra-ai/mastra/commit/217cd7a4ce171e9a575c41bb8c83300f4db03236), [`a5a23d9`](https://github.com/mastra-ai/mastra/commit/a5a23d981920d458dc6078919992a5338931ef02)]:
+  - @mastra/core@0.14.1
+  - @mastra/deployer@0.14.1
+
+## 0.11.15-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [[`6e7e120`](https://github.com/mastra-ai/mastra/commit/6e7e1207d6e8d8b838f9024f90bd10df1181ba27), [`4c8956f`](https://github.com/mastra-ai/mastra/commit/4c8956f3110ccf39595e022f127a44a0a5c09c86), [`a5a23d9`](https://github.com/mastra-ai/mastra/commit/a5a23d981920d458dc6078919992a5338931ef02)]:
+  - @mastra/core@0.14.1-alpha.0
+  - @mastra/deployer@0.14.1-alpha.0
+
+## 0.11.14
+
+### Patch Changes
+
+- 03997ae: Update peerdeps
+- Updated dependencies [227c7e6]
+- Updated dependencies [12cae67]
+- Updated dependencies [bca2ba3]
+- Updated dependencies [fd3a3eb]
+- Updated dependencies [022f3a2]
+- Updated dependencies [6faaee5]
+- Updated dependencies [4232b14]
+- Updated dependencies [6313063]
+- Updated dependencies [a89de7e]
+- Updated dependencies [96518cc]
+- Updated dependencies [5a37d0c]
+- Updated dependencies [4bde0cb]
+- Updated dependencies [cf4f357]
+- Updated dependencies [c712849]
+- Updated dependencies [04dcd66]
+- Updated dependencies [03997ae]
+- Updated dependencies [ad888a2]
+- Updated dependencies [481751d]
+- Updated dependencies [2454423]
+- Updated dependencies [194e395]
+- Updated dependencies [a9916bd]
+- Updated dependencies [a722c0b]
+- Updated dependencies [c30bca8]
+- Updated dependencies [95e1330]
+- Updated dependencies [33eb340]
+- Updated dependencies [3b5fec7]
+- Updated dependencies [a8f129d]
+- Updated dependencies [6dfc4a6]
+  - @mastra/core@0.14.0
+  - @mastra/deployer@0.14.0
+
+## 0.11.14-alpha.2
+
+### Patch Changes
+
+- 03997ae: Update peerdeps
+- Updated dependencies [03997ae]
+  - @mastra/deployer@0.14.0-alpha.7
+  - @mastra/core@0.14.0-alpha.7
+
+## 0.11.14-alpha.1
+
+### Patch Changes
+
+- Updated dependencies [bca2ba3]
+- Updated dependencies [6faaee5]
+- Updated dependencies [4232b14]
+- Updated dependencies [6313063]
+- Updated dependencies [a89de7e]
+- Updated dependencies [cf4f357]
+- Updated dependencies [a722c0b]
+- Updated dependencies [3b5fec7]
+- Updated dependencies [6dfc4a6]
+  - @mastra/deployer@0.14.0-alpha.1
+  - @mastra/core@0.14.0-alpha.1
+
+## 0.11.14-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [c30bca8]
+  - @mastra/core@0.13.3-alpha.0
+  - @mastra/deployer@0.13.3-alpha.0
+
+## 0.11.13
+
+### Patch Changes
+
+- Updated dependencies [d5330bf]
+- Updated dependencies [aaf0224]
+- Updated dependencies [2e74797]
+- Updated dependencies [42cb4e9]
+- Updated dependencies [8388649]
+- Updated dependencies [a239d41]
+- Updated dependencies [dd94a26]
+- Updated dependencies [3ba6772]
+- Updated dependencies [96169cc]
+- Updated dependencies [b5cf2a3]
+- Updated dependencies [2fff911]
+- Updated dependencies [b32c50d]
+- Updated dependencies [c6d2603]
+- Updated dependencies [63449d0]
+- Updated dependencies [121a3f8]
+- Updated dependencies [ce04175]
+- Updated dependencies [ec510e7]
+  - @mastra/core@0.13.2
+  - @mastra/deployer@0.13.2
+
+## 0.11.13-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [8388649]
+- Updated dependencies [dd94a26]
+- Updated dependencies [3ba6772]
+- Updated dependencies [2fff911]
+  - @mastra/core@0.13.2-alpha.0
+  - @mastra/deployer@0.13.2-alpha.0
+
+## 0.11.12
+
+### Patch Changes
+
+- Updated dependencies [cd0042e]
+  - @mastra/core@0.13.1
+  - @mastra/deployer@0.13.1
+
+## 0.11.12-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [cd0042e]
+  - @mastra/core@0.13.1-alpha.0
+  - @mastra/deployer@0.13.1-alpha.0
+
+## 0.11.11
+
+### Patch Changes
+
+- 4a406ec: fixes TypeScript declaration file imports to ensure proper ESM compatibility
+- Updated dependencies [cb36de0]
+- Updated dependencies [d0496e6]
+- Updated dependencies [7b8172f]
+- Updated dependencies [cb36de0]
+- Updated dependencies [d0496e6]
+- Updated dependencies [a82b851]
+- Updated dependencies [ea0c5f2]
+- Updated dependencies [41a0a0e]
+- Updated dependencies [2871020]
+- Updated dependencies [94f4812]
+- Updated dependencies [e202b82]
+- Updated dependencies [e00f6a0]
+- Updated dependencies [4a406ec]
+- Updated dependencies [b0e43c1]
+- Updated dependencies [5d377e5]
+- Updated dependencies [1fb812e]
+- Updated dependencies [35c5798]
+  - @mastra/core@0.13.0
+  - @mastra/deployer@0.13.0
+
+## 0.11.11-alpha.2
+
+### Patch Changes
+
+- 4a406ec: fixes TypeScript declaration file imports to ensure proper ESM compatibility
+- Updated dependencies [cb36de0]
+- Updated dependencies [cb36de0]
+- Updated dependencies [a82b851]
+- Updated dependencies [41a0a0e]
+- Updated dependencies [2871020]
+- Updated dependencies [4a406ec]
+- Updated dependencies [5d377e5]
+  - @mastra/core@0.13.0-alpha.2
+  - @mastra/deployer@0.13.0-alpha.2
+
+## 0.11.11-alpha.1
+
+### Patch Changes
+
+- Updated dependencies [7b8172f]
+- Updated dependencies [ea0c5f2]
+- Updated dependencies [b0e43c1]
+- Updated dependencies [1fb812e]
+- Updated dependencies [35c5798]
+  - @mastra/deployer@0.13.0-alpha.1
+  - @mastra/core@0.13.0-alpha.1
+
+## 0.11.11-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [94f4812]
+- Updated dependencies [e202b82]
+- Updated dependencies [e00f6a0]
+  - @mastra/core@0.12.2-alpha.0
+  - @mastra/deployer@0.12.2-alpha.0
+
+## 0.11.10
+
+### Patch Changes
+
+- Updated dependencies [33dcb07]
+- Updated dependencies [d0d9500]
+- Updated dependencies [d30b1a0]
+- Updated dependencies [bff87f7]
+- Updated dependencies [07fe7a2]
+- Updated dependencies [b4a8df0]
+  - @mastra/core@0.12.1
+  - @mastra/deployer@0.12.1
+
+## 0.11.10-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [33dcb07]
+- Updated dependencies [d30b1a0]
+- Updated dependencies [bff87f7]
+- Updated dependencies [07fe7a2]
+- Updated dependencies [b4a8df0]
+  - @mastra/core@0.12.1-alpha.0
+  - @mastra/deployer@0.12.1-alpha.0
+
+## 0.11.9
+
+### Patch Changes
+
+- bc6b44a: Extract tools import from `createHonoServer`; the function now receives tools via a prop on the `options` parameter.
+- f42c4c2: update peer deps for packages to latest core range
+- Updated dependencies [510e2c8]
+- Updated dependencies [2f72fb2]
+- Updated dependencies [27cc97a]
+- Updated dependencies [832691b]
+- Updated dependencies [557bb9d]
+- Updated dependencies [27cc97a]
+- Updated dependencies [3f89307]
+- Updated dependencies [9eda7d4]
+- Updated dependencies [9d49408]
+- Updated dependencies [bc6b44a]
+- Updated dependencies [41daa63]
+- Updated dependencies [ad0a58b]
+- Updated dependencies [254a36b]
+- Updated dependencies [2ecf658]
+- Updated dependencies [7a7754f]
+- Updated dependencies [fc92d80]
+- Updated dependencies [e0f73c6]
+- Updated dependencies [0b89602]
+- Updated dependencies [4d37822]
+- Updated dependencies [23a6a7c]
+- Updated dependencies [cda801d]
+- Updated dependencies [a77c823]
+- Updated dependencies [ff9c125]
+- Updated dependencies [09bca64]
+- Updated dependencies [9802f42]
+- Updated dependencies [d5cc460]
+- Updated dependencies [f42c4c2]
+- Updated dependencies [b8efbb9]
+- Updated dependencies [71466e7]
+- Updated dependencies [0c99fbe]
+  - @mastra/core@0.12.0
+  - @mastra/deployer@0.12.0
+
+## 0.11.9-alpha.1
+
+### Patch Changes
+
+- f42c4c2: update peer deps for packages to latest core range
+- Updated dependencies [f42c4c2]
+  - @mastra/deployer@0.12.0-alpha.5
+  - @mastra/core@0.12.0-alpha.5
+
+## 0.11.9-alpha.0
+
+### Patch Changes
+
+- bc6b44a: Extract tools import from `createHonoServer`; the function now receives tools via a prop on the `options` parameter.
+- Updated dependencies [510e2c8]
+- Updated dependencies [2f72fb2]
+- Updated dependencies [832691b]
+- Updated dependencies [557bb9d]
+- Updated dependencies [3f89307]
+- Updated dependencies [9eda7d4]
+- Updated dependencies [9d49408]
+- Updated dependencies [bc6b44a]
+- Updated dependencies [2ecf658]
+- Updated dependencies [7a7754f]
+- Updated dependencies [fc92d80]
+- Updated dependencies [23a6a7c]
+- Updated dependencies [09bca64]
+  - @mastra/core@0.12.0-alpha.0
+  - @mastra/deployer@0.12.0-alpha.0
+
+## 0.11.8
+
+### Patch Changes
+
+- 1a45f3a: Fix peerdeps
+
+## 0.11.7
+
+### Patch Changes
+
+- Updated dependencies [f248d53]
+- Updated dependencies [82c6860]
+- Updated dependencies [2affc57]
+- Updated dependencies [66e13e3]
+- Updated dependencies [edd9482]
+- Updated dependencies [0938991]
+- Updated dependencies [18344d7]
+- Updated dependencies [7ba91fa]
+- Updated dependencies [a512ede]
+- Updated dependencies [35b1155]
+- Updated dependencies [9d372c2]
+- Updated dependencies [45469c5]
+- Updated dependencies [40c2525]
+- Updated dependencies [e473f27]
+- Updated dependencies [032cb66]
+- Updated dependencies [6f50efd]
+- Updated dependencies [24eb25c]
+- Updated dependencies [bf6903e]
+- Updated dependencies [703ac71]
+- Updated dependencies [a723d69]
+- Updated dependencies [7827943]
+- Updated dependencies [4c06f06]
+- Updated dependencies [5889a31]
+- Updated dependencies [bf1e7e7]
+- Updated dependencies [65e3395]
+- Updated dependencies [9de6f58]
+- Updated dependencies [4933192]
+- Updated dependencies [d1c77a4]
+- Updated dependencies [bea9dd1]
+- Updated dependencies [7983e53]
+- Updated dependencies [dcd4802]
+- Updated dependencies [cbddd18]
+- Updated dependencies [7ba91fa]
+- Updated dependencies [15ce274]
+  - @mastra/core@0.11.0
+  - @mastra/deployer@0.11.0
+
+## 0.11.7-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [0938991]
+- Updated dependencies [6f50efd]
+- Updated dependencies [bf6903e]
+- Updated dependencies [7827943]
+- Updated dependencies [bf1e7e7]
+- Updated dependencies [cbddd18]
+  - @mastra/deployer@0.11.0-alpha.0
+  - @mastra/core@0.11.0-alpha.0
+
+## 0.11.6
+
+### Patch Changes
+
+- Updated dependencies [7776324]
+- Updated dependencies [0b56518]
+- Updated dependencies [db5cc15]
+- Updated dependencies [2ba5b76]
+- Updated dependencies [7b57e2c]
+- Updated dependencies [5237998]
+- Updated dependencies [c3a30de]
+- Updated dependencies [37c1acd]
+- Updated dependencies [1aa60b1]
+- Updated dependencies [89ec9d4]
+- Updated dependencies [cf3a184]
+- Updated dependencies [fe4bbd4]
+- Updated dependencies [d6bfd60]
+- Updated dependencies [626b0f4]
+- Updated dependencies [c22a91f]
+- Updated dependencies [f7403ab]
+- Updated dependencies [6c89d7f]
+  - @mastra/deployer@0.10.15
+  - @mastra/core@0.10.15
+
+## 0.11.6-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [7776324]
+- Updated dependencies [db5cc15]
+- Updated dependencies [7b57e2c]
+- Updated dependencies [5237998]
+- Updated dependencies [37c1acd]
+- Updated dependencies [1aa60b1]
+- Updated dependencies [89ec9d4]
+- Updated dependencies [626b0f4]
+- Updated dependencies [c22a91f]
+- Updated dependencies [f7403ab]
+- Updated dependencies [6c89d7f]
+  - @mastra/deployer@0.10.15-alpha.0
+  - @mastra/core@0.10.15-alpha.0
+
+## 0.11.5
+
+### Patch Changes
+
+- Updated dependencies [b4a9811]
+- Updated dependencies [4d5583d]
+- Updated dependencies [53e3f58]
+  - @mastra/core@0.10.12
+  - @mastra/deployer@0.10.12
+
+## 0.11.5-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [b4a9811]
+- Updated dependencies [53e3f58]
+  - @mastra/core@0.10.12-alpha.0
+  - @mastra/deployer@0.10.12-alpha.0
+
+## 0.11.4
+
+### Patch Changes
+
+- Updated dependencies [2873c7f]
+- Updated dependencies [1c1c6a1]
+- Updated dependencies [bc40cdd]
+- Updated dependencies [2873c7f]
+- Updated dependencies [1c1c6a1]
+- Updated dependencies [d9b26b5]
+- Updated dependencies [f8ce2cc]
+- Updated dependencies [8c846b6]
+- Updated dependencies [c7bbf1e]
+- Updated dependencies [8722d53]
+- Updated dependencies [565cc0c]
+- Updated dependencies [b790fd1]
+- Updated dependencies [132027f]
+- Updated dependencies [0c85311]
+- Updated dependencies [d7ed04d]
+- Updated dependencies [18ca936]
+- Updated dependencies [cb16baf]
+- Updated dependencies [40cd025]
+- Updated dependencies [f36e4f1]
+- Updated dependencies [7f6e403]
+  - @mastra/core@0.10.11
+  - @mastra/deployer@0.10.11
+
+## 0.11.4-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [bc40cdd]
+- Updated dependencies [f8ce2cc]
+- Updated dependencies [8c846b6]
+- Updated dependencies [b790fd1]
+- Updated dependencies [d7ed04d]
+- Updated dependencies [f36e4f1]
+  - @mastra/deployer@0.10.11-alpha.0
+  - @mastra/core@0.10.11-alpha.0
+
+## 0.11.3
+
+### Patch Changes
+
+- Updated dependencies [6e13b80]
+- Updated dependencies [6997af1]
+- Updated dependencies [4d3fbdf]
+  - @mastra/deployer@0.10.10
+  - @mastra/core@0.10.10
+
+## 0.11.3-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [6e13b80]
+- Updated dependencies [4d3fbdf]
+  - @mastra/deployer@0.10.10-alpha.0
+  - @mastra/core@0.10.10-alpha.0
+
+## 0.11.2
+
+### Patch Changes
+
+- Updated dependencies [9dda1ac]
+- Updated dependencies [9dda1ac]
+- Updated dependencies [c984582]
+- Updated dependencies [7e801dd]
+- Updated dependencies [a606c75]
+- Updated dependencies [7aa70a4]
+- Updated dependencies [764f86a]
+- Updated dependencies [1760a1c]
+- Updated dependencies [038e5ae]
+- Updated dependencies [7dda16a]
+- Updated dependencies [6f87544]
+- Updated dependencies [5ebfcdd]
+- Updated dependencies [81a1b3b]
+- Updated dependencies [b2d0c91]
+- Updated dependencies [4e809ad]
+- Updated dependencies [57929df]
+- Updated dependencies [7e801dd]
+- Updated dependencies [b7852ed]
+- Updated dependencies [6320a61]
+  - @mastra/core@0.10.9
+  - @mastra/deployer@0.10.9
+
+## 0.11.2-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [9dda1ac]
+- Updated dependencies [9dda1ac]
+- Updated dependencies [c984582]
+- Updated dependencies [7e801dd]
+- Updated dependencies [a606c75]
+- Updated dependencies [7aa70a4]
+- Updated dependencies [764f86a]
+- Updated dependencies [1760a1c]
+- Updated dependencies [038e5ae]
+- Updated dependencies [7dda16a]
+- Updated dependencies [6f87544]
+- Updated dependencies [5ebfcdd]
+- Updated dependencies [81a1b3b]
+- Updated dependencies [b2d0c91]
+- Updated dependencies [4e809ad]
+- Updated dependencies [57929df]
+- Updated dependencies [7e801dd]
+- Updated dependencies [b7852ed]
+- Updated dependencies [6320a61]
+  - @mastra/core@0.10.9-alpha.0
+  - @mastra/deployer@0.10.9-alpha.0
+
 ## 0.11.1
 
 ### Patch Changes

@@ -1,5 +1,264 @@
 # @mastra/mcp
 
+## 0.10.12
+
+### Patch Changes
+
+- 895d3b2: Update the MCP SDK version and update elicitation to match new spec (reject becomes decline)
+- e1aed55: Fixed an issue where keep-alive messages were interfering with endpoint messages on initial SSE connection
+- 03997ae: Update peerdeps
+- Updated dependencies [227c7e6]
+- Updated dependencies [12cae67]
+- Updated dependencies [fd3a3eb]
+- Updated dependencies [6faaee5]
+- Updated dependencies [4232b14]
+- Updated dependencies [a89de7e]
+- Updated dependencies [5a37d0c]
+- Updated dependencies [4bde0cb]
+- Updated dependencies [cf4f357]
+- Updated dependencies [ad888a2]
+- Updated dependencies [481751d]
+- Updated dependencies [2454423]
+- Updated dependencies [194e395]
+- Updated dependencies [a722c0b]
+- Updated dependencies [c30bca8]
+- Updated dependencies [3b5fec7]
+- Updated dependencies [a8f129d]
+  - @mastra/core@0.14.0
+
+## 0.10.12-alpha.2
+
+### Patch Changes
+
+- 03997ae: Update peerdeps
+  - @mastra/core@0.14.0-alpha.7
+
+## 0.10.12-alpha.1
+
+### Patch Changes
+
+- e1aed55: Fixed an issue where keep-alive messages were interfering with endpoint messages on initial SSE connection
+- Updated dependencies [0a7f675]
+- Updated dependencies [12cae67]
+- Updated dependencies [5a37d0c]
+- Updated dependencies [4bde0cb]
+- Updated dependencies [1a80071]
+- Updated dependencies [36a3be8]
+- Updated dependencies [361757b]
+- Updated dependencies [2bb9955]
+- Updated dependencies [2454423]
+- Updated dependencies [a44d91e]
+- Updated dependencies [dfb91e9]
+- Updated dependencies [a741dde]
+- Updated dependencies [7cb3fc0]
+- Updated dependencies [195eabb]
+- Updated dependencies [b78b95b]
+  - @mastra/core@0.14.0-alpha.4
+
+## 0.10.12-alpha.0
+
+### Patch Changes
+
+- 895d3b2: Update the MCP SDK version and update elicitation to match new spec (reject becomes decline)
+- Updated dependencies [6faaee5]
+- Updated dependencies [4232b14]
+- Updated dependencies [a89de7e]
+- Updated dependencies [cf4f357]
+- Updated dependencies [a722c0b]
+- Updated dependencies [3b5fec7]
+  - @mastra/core@0.14.0-alpha.1
+
+## 0.10.11
+
+### Patch Changes
+
+- ec510e7: Tool input validation now returns errors as tool results instead of throwing, allowing agents to understand validation failures and retry with corrected parameters.
+- Updated dependencies [d5330bf]
+- Updated dependencies [2e74797]
+- Updated dependencies [8388649]
+- Updated dependencies [a239d41]
+- Updated dependencies [dd94a26]
+- Updated dependencies [3ba6772]
+- Updated dependencies [b5cf2a3]
+- Updated dependencies [2fff911]
+- Updated dependencies [b32c50d]
+- Updated dependencies [63449d0]
+- Updated dependencies [121a3f8]
+- Updated dependencies [ec510e7]
+  - @mastra/core@0.13.2
+
+## 0.10.11-alpha.0
+
+### Patch Changes
+
+- ec510e7: Tool input validation now returns errors as tool results instead of throwing, allowing agents to understand validation failures and retry with corrected parameters.
+- Updated dependencies [d5330bf]
+- Updated dependencies [a239d41]
+- Updated dependencies [b32c50d]
+- Updated dependencies [121a3f8]
+- Updated dependencies [ec510e7]
+  - @mastra/core@0.13.2-alpha.2
+
+## 0.10.10
+
+### Patch Changes
+
+- 9e792ef: Expose authProvider option for HTTP-based MCP servers to enable OAuth authentication with automatic token refresh. The authProvider is automatically passed to both Streamable HTTP and SSE transports.
+- 4a406ec: fixes TypeScript declaration file imports to ensure proper ESM compatibility
+- Updated dependencies [cb36de0]
+- Updated dependencies [d0496e6]
+- Updated dependencies [a82b851]
+- Updated dependencies [ea0c5f2]
+- Updated dependencies [41a0a0e]
+- Updated dependencies [2871020]
+- Updated dependencies [94f4812]
+- Updated dependencies [e202b82]
+- Updated dependencies [e00f6a0]
+- Updated dependencies [4a406ec]
+- Updated dependencies [b0e43c1]
+- Updated dependencies [5d377e5]
+- Updated dependencies [1fb812e]
+- Updated dependencies [35c5798]
+  - @mastra/core@0.13.0
+
+## 0.10.10-alpha.1
+
+### Patch Changes
+
+- 9e792ef: Expose authProvider option for HTTP-based MCP servers to enable OAuth authentication with automatic token refresh. The authProvider is automatically passed to both Streamable HTTP and SSE transports.
+- Updated dependencies [d0496e6]
+  - @mastra/core@0.13.0-alpha.3
+
+## 0.10.10-alpha.0
+
+### Patch Changes
+
+- 4a406ec: fixes TypeScript declaration file imports to ensure proper ESM compatibility
+- Updated dependencies [cb36de0]
+- Updated dependencies [a82b851]
+- Updated dependencies [41a0a0e]
+- Updated dependencies [2871020]
+- Updated dependencies [4a406ec]
+- Updated dependencies [5d377e5]
+  - @mastra/core@0.13.0-alpha.2
+
+## 0.10.9
+
+### Patch Changes
+
+- f90797b: dependencies updates:
+  - Updated dependency [`@apidevtools/json-schema-ref-parser@^14.1.1` ↗︎](https://www.npmjs.com/package/@apidevtools/json-schema-ref-parser/v/14.1.1) (from `^14.1.0`, in `dependencies`)
+- Updated dependencies [33dcb07]
+- Updated dependencies [d0d9500]
+- Updated dependencies [d30b1a0]
+- Updated dependencies [bff87f7]
+- Updated dependencies [b4a8df0]
+  - @mastra/core@0.12.1
+
+## 0.10.9-alpha.0
+
+### Patch Changes
+
+- f90797b: dependencies updates:
+  - Updated dependency [`@apidevtools/json-schema-ref-parser@^14.1.1` ↗︎](https://www.npmjs.com/package/@apidevtools/json-schema-ref-parser/v/14.1.1) (from `^14.1.0`, in `dependencies`)
+- Updated dependencies [33dcb07]
+- Updated dependencies [d30b1a0]
+- Updated dependencies [bff87f7]
+- Updated dependencies [b4a8df0]
+  - @mastra/core@0.12.1-alpha.0
+
+## 0.10.8
+
+### Patch Changes
+
+- f42c4c2: update peer deps for packages to latest core range
+- Updated dependencies [510e2c8]
+- Updated dependencies [2f72fb2]
+- Updated dependencies [27cc97a]
+- Updated dependencies [3f89307]
+- Updated dependencies [9eda7d4]
+- Updated dependencies [9d49408]
+- Updated dependencies [41daa63]
+- Updated dependencies [ad0a58b]
+- Updated dependencies [254a36b]
+- Updated dependencies [2ecf658]
+- Updated dependencies [7a7754f]
+- Updated dependencies [fc92d80]
+- Updated dependencies [e0f73c6]
+- Updated dependencies [0b89602]
+- Updated dependencies [4d37822]
+- Updated dependencies [23a6a7c]
+- Updated dependencies [cda801d]
+- Updated dependencies [a77c823]
+- Updated dependencies [ff9c125]
+- Updated dependencies [09bca64]
+- Updated dependencies [b8efbb9]
+- Updated dependencies [71466e7]
+- Updated dependencies [0c99fbe]
+  - @mastra/core@0.12.0
+
+## 0.10.8-alpha.0
+
+### Patch Changes
+
+- f42c4c2: update peer deps for packages to latest core range
+  - @mastra/core@0.12.0-alpha.5
+
+## 0.10.7
+
+### Patch Changes
+
+- ce088f5: Update all peerdeps to latest core
+  - @mastra/core@0.11.1
+
+## 0.10.6
+
+### Patch Changes
+
+- f5ec3a4: Fix tool calling args for mcp server to ensure validatedArgs are not undefined
+- ab3bbff: Add support for extra arguments in mcp
+- c0ba5e2: Handle json schema with $defs and $ref property for MCP tool schemas.
+- cb16baf: Fix MCP tool output schema type and return value
+- Updated dependencies [2873c7f]
+- Updated dependencies [1c1c6a1]
+- Updated dependencies [f8ce2cc]
+- Updated dependencies [8c846b6]
+- Updated dependencies [c7bbf1e]
+- Updated dependencies [8722d53]
+- Updated dependencies [565cc0c]
+- Updated dependencies [b790fd1]
+- Updated dependencies [132027f]
+- Updated dependencies [0c85311]
+- Updated dependencies [d7ed04d]
+- Updated dependencies [cb16baf]
+- Updated dependencies [f36e4f1]
+- Updated dependencies [7f6e403]
+  - @mastra/core@0.10.11
+
+## 0.10.6-alpha.1
+
+### Patch Changes
+
+- c0ba5e2: Handle json schema with $defs and $ref property for MCP tool schemas.
+- cb16baf: Fix MCP tool output schema type and return value
+- Updated dependencies [c7bbf1e]
+- Updated dependencies [8722d53]
+- Updated dependencies [132027f]
+- Updated dependencies [0c85311]
+- Updated dependencies [cb16baf]
+  - @mastra/core@0.10.11-alpha.3
+
+## 0.10.6-alpha.0
+
+### Patch Changes
+
+- f5ec3a4: Fix tool calling args for mcp server to ensure validatedArgs are not undefined
+- ab3bbff: Add support for extra arguments in mcp
+- Updated dependencies [2873c7f]
+- Updated dependencies [1c1c6a1]
+- Updated dependencies [565cc0c]
+  - @mastra/core@0.10.11-alpha.2
+
 ## 0.10.5
 
 ### Patch Changes

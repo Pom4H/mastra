@@ -25,26 +25,26 @@ export const mastra = new Mastra({
   // ...
   deployer: new CloudflareDeployer({
     projectName: "hello-mastra",
-    scope: "",
-    auth: {
-      apiToken: process.env.CLOUDFLARE_API_TOKEN!,
-      apiEmail: "name@email.com"
-    }
-  })
+    env: {
+      NODE_ENV: "production",
+    },
+  }),
 });
 ```
 
 > See the [CloudflareDeployer](/reference/deployer/cloudflare) API reference for all available configuration options.
 
-### Cloudflare API token
-
-In your Cloudflare dashboard, navigate to **Profile** > **API Tokens**, then select **Edit Cloudflare Workers** and click **Use template** to create a token for the `CloudflareDeployer`.
-
-> To learn how to create a Cloudflare API token, see [Create API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/) in the Cloudflare docs.
-
 ## Manual deployment
 
 Manual deployments are also possible using the [Cloudflare Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/). With the Wrangler CLI installed run the following from your project root to deploy your application.
+
+With the Wrangler CLI installed, login and authenticate with your Cloudflare logins:
+
+```bash copy
+npx wrangler login
+```
+
+Run the following to build and deploy your application to Cloudflare
 
 ```bash copy
 npm run build && wrangler deploy --config .mastra/output/wrangler.json
@@ -76,13 +76,12 @@ The `CloudflareDeployer` automatically generates a `wrangler.json` configuration
   "compatibility_flags": ["nodejs_compat", "nodejs_compat_populate_process_env"],
   "observability": { "logs": { "enabled": true } },
   "vars": {
-    "OPENAI_API_KEY": "..",
+    "OPENAI_API_KEY": "...",
     "CLOUDFLARE_API_TOKEN": "..."
   }
 }
+
 ```
-
-
 ## Next steps
 
 - [Mastra Client SDK](/docs/client-js/overview)

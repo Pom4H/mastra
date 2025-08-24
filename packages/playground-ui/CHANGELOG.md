@@ -1,5 +1,836 @@
 # @mastra/playground-ui
 
+## 5.2.1
+
+### Patch Changes
+
+- Updated dependencies [[`6e7e120`](https://github.com/mastra-ai/mastra/commit/6e7e1207d6e8d8b838f9024f90bd10df1181ba27), [`0f00e17`](https://github.com/mastra-ai/mastra/commit/0f00e172953ccdccadb35ed3d70f5e4d89115869), [`217cd7a`](https://github.com/mastra-ai/mastra/commit/217cd7a4ce171e9a575c41bb8c83300f4db03236), [`a5a23d9`](https://github.com/mastra-ai/mastra/commit/a5a23d981920d458dc6078919992a5338931ef02)]:
+  - @mastra/core@0.14.1
+  - @mastra/client-js@0.10.23
+
+## 5.2.1-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [[`6e7e120`](https://github.com/mastra-ai/mastra/commit/6e7e1207d6e8d8b838f9024f90bd10df1181ba27), [`a5a23d9`](https://github.com/mastra-ai/mastra/commit/a5a23d981920d458dc6078919992a5338931ef02)]:
+  - @mastra/core@0.14.1-alpha.0
+  - @mastra/client-js@0.10.23-alpha.0
+
+## 5.2.0
+
+### Minor Changes
+
+- 03997ae: Update peer deps of core
+
+### Patch Changes
+
+- dd702eb: Fix default in playground
+- 6313063: Implement model switcher in playground
+- 1d59515: Add options to playground based on modelVersion
+- 9ce22c5: Fix swagger-ui link
+- 36928f0: Use right icon for anthropic in model switcher
+- 2454423: Agentic loop and streaming workflow: generateVNext and streamVNext
+- 398ed81: PG types
+- Updated dependencies [227c7e6]
+- Updated dependencies [0a7f675]
+- Updated dependencies [12cae67]
+- Updated dependencies [fd3a3eb]
+- Updated dependencies [6faaee5]
+- Updated dependencies [4232b14]
+- Updated dependencies [6313063]
+- Updated dependencies [a89de7e]
+- Updated dependencies [5a37d0c]
+- Updated dependencies [4bde0cb]
+- Updated dependencies [1d59515]
+- Updated dependencies [cf4f357]
+- Updated dependencies [ad888a2]
+- Updated dependencies [481751d]
+- Updated dependencies [2454423]
+- Updated dependencies [194e395]
+- Updated dependencies [a722c0b]
+- Updated dependencies [c30bca8]
+- Updated dependencies [3b5fec7]
+- Updated dependencies [a8f129d]
+  - @mastra/core@0.14.0
+  - @mastra/client-js@0.10.22
+
+## 5.2.0-alpha.6
+
+### Minor Changes
+
+- 03997ae: Update peer deps of core
+
+### Patch Changes
+
+- @mastra/core@0.14.0-alpha.7
+- @mastra/client-js@0.10.22-alpha.7
+
+## 5.1.21-alpha.5
+
+### Patch Changes
+
+- 9ce22c5: Fix swagger-ui link
+- Updated dependencies [ad888a2]
+- Updated dependencies [481751d]
+- Updated dependencies [194e395]
+  - @mastra/core@0.14.0-alpha.6
+  - @mastra/client-js@0.10.22-alpha.6
+
+## 5.1.21-alpha.4
+
+### Patch Changes
+
+- dd702eb: Fix default in playground
+
+## 5.1.21-alpha.3
+
+### Patch Changes
+
+- 1d59515: Add options to playground based on modelVersion
+- 398ed81: PG types
+- b78b95b: Support generateVNext in playground
+- Updated dependencies [0a7f675]
+- Updated dependencies [12cae67]
+- Updated dependencies [5a37d0c]
+- Updated dependencies [4bde0cb]
+- Updated dependencies [1a80071]
+- Updated dependencies [36a3be8]
+- Updated dependencies [1d59515]
+- Updated dependencies [361757b]
+- Updated dependencies [2bb9955]
+- Updated dependencies [2454423]
+- Updated dependencies [a44d91e]
+- Updated dependencies [dfb91e9]
+- Updated dependencies [a741dde]
+- Updated dependencies [7cb3fc0]
+- Updated dependencies [195eabb]
+- Updated dependencies [b78b95b]
+  - @mastra/core@0.14.0-alpha.4
+  - @mastra/client-js@0.10.22-alpha.4
+
+## 5.1.21-alpha.2
+
+### Patch Changes
+
+- 36928f0: Use right icon for anthropic in model switcher
+- Updated dependencies [227c7e6]
+- Updated dependencies [fd3a3eb]
+- Updated dependencies [a8f129d]
+  - @mastra/core@0.14.0-alpha.3
+  - @mastra/client-js@0.10.22-alpha.3
+
+## 5.1.21-alpha.1
+
+### Patch Changes
+
+- 6313063: Implement model switcher in playground
+- Updated dependencies [6faaee5]
+- Updated dependencies [4232b14]
+- Updated dependencies [6313063]
+- Updated dependencies [a89de7e]
+- Updated dependencies [cf4f357]
+- Updated dependencies [a722c0b]
+- Updated dependencies [3b5fec7]
+  - @mastra/core@0.14.0-alpha.1
+  - @mastra/client-js@0.10.22-alpha.1
+
+## 5.1.21-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [c30bca8]
+  - @mastra/core@0.13.3-alpha.0
+  - @mastra/client-js@0.10.22-alpha.0
+
+## 5.1.20
+
+### Patch Changes
+
+- 0d32203: dependencies updates:
+  - Updated dependency [`zustand@^5.0.7` ↗︎](https://www.npmjs.com/package/zustand/v/5.0.7) (from `^5.0.6`, in `dependencies`)
+- c6d2603: Properly set baseUrl in playground when user sets the host or port in Mastra instance.
+- 7aad750: Fix tool ui showing after message when chat is refreshed
+- Updated dependencies [d5330bf]
+- Updated dependencies [2e74797]
+- Updated dependencies [8388649]
+- Updated dependencies [a239d41]
+- Updated dependencies [dd94a26]
+- Updated dependencies [3ba6772]
+- Updated dependencies [96169cc]
+- Updated dependencies [b5cf2a3]
+- Updated dependencies [2fff911]
+- Updated dependencies [b32c50d]
+- Updated dependencies [63449d0]
+- Updated dependencies [121a3f8]
+- Updated dependencies [ce04175]
+- Updated dependencies [ec510e7]
+  - @mastra/core@0.13.2
+  - @mastra/client-js@0.10.21
+
+## 5.1.20-alpha.1
+
+### Patch Changes
+
+- 0d32203: dependencies updates:
+  - Updated dependency [`zustand@^5.0.7` ↗︎](https://www.npmjs.com/package/zustand/v/5.0.7) (from `^5.0.6`, in `dependencies`)
+- c6d2603: Properly set baseUrl in playground when user sets the host or port in Mastra instance.
+- Updated dependencies [d5330bf]
+- Updated dependencies [a239d41]
+- Updated dependencies [96169cc]
+- Updated dependencies [b32c50d]
+- Updated dependencies [121a3f8]
+- Updated dependencies [ce04175]
+- Updated dependencies [ec510e7]
+  - @mastra/core@0.13.2-alpha.2
+  - @mastra/client-js@0.10.21-alpha.2
+
+## 5.1.20-alpha.0
+
+### Patch Changes
+
+- 7aad750: Fix tool ui showing after message when chat is refreshed
+- Updated dependencies [8388649]
+- Updated dependencies [dd94a26]
+- Updated dependencies [3ba6772]
+- Updated dependencies [2fff911]
+  - @mastra/core@0.13.2-alpha.0
+  - @mastra/client-js@0.10.21-alpha.0
+
+## 5.1.19
+
+### Patch Changes
+
+- Updated dependencies [cd0042e]
+  - @mastra/core@0.13.1
+  - @mastra/client-js@0.10.20
+
+## 5.1.19-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [cd0042e]
+  - @mastra/core@0.13.1-alpha.0
+  - @mastra/client-js@0.10.20-alpha.0
+
+## 5.1.18
+
+### Patch Changes
+
+- 0ebfe8a: dependencies updates:
+  - Updated dependency [`motion@^12.23.12` ↗︎](https://www.npmjs.com/package/motion/v/12.23.12) (from `^12.23.9`, in `dependencies`)
+- f5853be: Added a preview button that opens a modal, rendering the markdown in the working memory text area
+- ea0c5f2: Update to support new scorer api
+- Updated dependencies [cb36de0]
+- Updated dependencies [d0496e6]
+- Updated dependencies [a82b851]
+- Updated dependencies [ea0c5f2]
+- Updated dependencies [41a0a0e]
+- Updated dependencies [2871020]
+- Updated dependencies [42dfc48]
+- Updated dependencies [94f4812]
+- Updated dependencies [e202b82]
+- Updated dependencies [e00f6a0]
+- Updated dependencies [4a406ec]
+- Updated dependencies [b0e43c1]
+- Updated dependencies [5d377e5]
+- Updated dependencies [1fb812e]
+- Updated dependencies [35c5798]
+  - @mastra/core@0.13.0
+  - @mastra/client-js@0.10.19
+
+## 5.1.18-alpha.3
+
+### Patch Changes
+
+- f5853be: Added a preview button that opens a modal, rendering the markdown in the working memory text area
+
+## 5.1.18-alpha.2
+
+### Patch Changes
+
+- 0ebfe8a: dependencies updates:
+  - Updated dependency [`motion@^12.23.12` ↗︎](https://www.npmjs.com/package/motion/v/12.23.12) (from `^12.23.9`, in `dependencies`)
+- Updated dependencies [cb36de0]
+- Updated dependencies [a82b851]
+- Updated dependencies [41a0a0e]
+- Updated dependencies [2871020]
+- Updated dependencies [42dfc48]
+- Updated dependencies [4a406ec]
+- Updated dependencies [5d377e5]
+  - @mastra/core@0.13.0-alpha.2
+  - @mastra/client-js@0.10.19-alpha.2
+
+## 5.1.18-alpha.1
+
+### Patch Changes
+
+- ea0c5f2: Update to support new scorer api
+- Updated dependencies [ea0c5f2]
+- Updated dependencies [b0e43c1]
+- Updated dependencies [1fb812e]
+- Updated dependencies [35c5798]
+  - @mastra/core@0.13.0-alpha.1
+  - @mastra/client-js@0.10.19-alpha.1
+
+## 5.1.18-alpha.0
+
+### Patch Changes
+
+- Updated dependencies [94f4812]
+- Updated dependencies [e202b82]
+- Updated dependencies [e00f6a0]
+  - @mastra/core@0.12.2-alpha.0
+  - @mastra/client-js@0.10.19-alpha.0
+
+## 5.1.17
+
+### Patch Changes
+
+- d8e8349: dependencies updates:
+  - Updated dependency [`@xyflow/react@^12.8.2` ↗︎](https://www.npmjs.com/package/@xyflow/react/v/12.8.2) (from `^12.8.1`, in `dependencies`)
+- c8924b6: dependencies updates:
+  - Updated dependency [`motion@^12.23.9` ↗︎](https://www.npmjs.com/package/motion/v/12.23.9) (from `^12.23.0`, in `dependencies`)
+- Updated dependencies [6690a16]
+- Updated dependencies [33dcb07]
+- Updated dependencies [d0d9500]
+- Updated dependencies [d30b1a0]
+- Updated dependencies [bff87f7]
+- Updated dependencies [b4a8df0]
+  - @mastra/client-js@0.10.18
+  - @mastra/core@0.12.1
+
+## 5.1.17-alpha.0
+
+### Patch Changes
+
+- d8e8349: dependencies updates:
+  - Updated dependency [`@xyflow/react@^12.8.2` ↗︎](https://www.npmjs.com/package/@xyflow/react/v/12.8.2) (from `^12.8.1`, in `dependencies`)
+- c8924b6: dependencies updates:
+  - Updated dependency [`motion@^12.23.9` ↗︎](https://www.npmjs.com/package/motion/v/12.23.9) (from `^12.23.0`, in `dependencies`)
+- Updated dependencies [6690a16]
+- Updated dependencies [33dcb07]
+- Updated dependencies [d30b1a0]
+- Updated dependencies [bff87f7]
+- Updated dependencies [b4a8df0]
+  - @mastra/client-js@0.10.18-alpha.0
+  - @mastra/core@0.12.1-alpha.0
+
+## 5.1.16
+
+### Patch Changes
+
+- f873f3a: dependencies updates:
+  - Updated dependency [`zustand@^5.0.6` ↗︎](https://www.npmjs.com/package/zustand/v/5.0.6) (from `^5.0.5`, in `dependencies`)
+- f442224: speech to text using voice config
+- 6336993: Fix workflow input form overflow
+- f42c4c2: update peer deps for packages to latest core range
+- 89d2f4e: add TTS to the playground
+- Updated dependencies [510e2c8]
+- Updated dependencies [2f72fb2]
+- Updated dependencies [27cc97a]
+- Updated dependencies [aa2715b]
+- Updated dependencies [3f89307]
+- Updated dependencies [9eda7d4]
+- Updated dependencies [9d49408]
+- Updated dependencies [41daa63]
+- Updated dependencies [ad0a58b]
+- Updated dependencies [254a36b]
+- Updated dependencies [2ecf658]
+- Updated dependencies [7a7754f]
+- Updated dependencies [fc92d80]
+- Updated dependencies [e0f73c6]
+- Updated dependencies [0b89602]
+- Updated dependencies [4d37822]
+- Updated dependencies [6bd354c]
+- Updated dependencies [23a6a7c]
+- Updated dependencies [cda801d]
+- Updated dependencies [a77c823]
+- Updated dependencies [ff9c125]
+- Updated dependencies [09bca64]
+- Updated dependencies [b641ba3]
+- Updated dependencies [9802f42]
+- Updated dependencies [1ac8f6b]
+- Updated dependencies [b8efbb9]
+- Updated dependencies [71466e7]
+- Updated dependencies [0c99fbe]
+  - @mastra/core@0.12.0
+  - @mastra/client-js@0.10.17
+
+## 5.1.16-alpha.2
+
+### Patch Changes
+
+- f42c4c2: update peer deps for packages to latest core range
+  - @mastra/core@0.12.0-alpha.5
+  - @mastra/client-js@0.10.17-alpha.5
+
+## 5.1.16-alpha.1
+
+### Patch Changes
+
+- 6336993: Fix workflow input form overflow
+- Updated dependencies [e0f73c6]
+- Updated dependencies [cda801d]
+- Updated dependencies [a77c823]
+  - @mastra/core@0.12.0-alpha.1
+  - @mastra/client-js@0.10.17-alpha.1
+
+## 5.1.16-alpha.0
+
+### Patch Changes
+
+- f873f3a: dependencies updates:
+  - Updated dependency [`zustand@^5.0.6` ↗︎](https://www.npmjs.com/package/zustand/v/5.0.6) (from `^5.0.5`, in `dependencies`)
+- f442224: speech to text using voice config
+- 89d2f4e: add TTS to the playground
+- Updated dependencies [510e2c8]
+- Updated dependencies [2f72fb2]
+- Updated dependencies [3f89307]
+- Updated dependencies [9eda7d4]
+- Updated dependencies [9d49408]
+- Updated dependencies [2ecf658]
+- Updated dependencies [7a7754f]
+- Updated dependencies [fc92d80]
+- Updated dependencies [6bd354c]
+- Updated dependencies [23a6a7c]
+- Updated dependencies [09bca64]
+- Updated dependencies [b641ba3]
+  - @mastra/core@0.12.0-alpha.0
+  - @mastra/client-js@0.10.17-alpha.0
+
+## 5.1.15
+
+### Patch Changes
+
+- ce088f5: Update all peerdeps to latest core
+  - @mastra/core@0.11.1
+  - @mastra/client-js@0.10.16
+
+## 5.1.14
+
+### Patch Changes
+
+- dd2a4c9: change the way we start the dev process of playground
+- af1f902: share thread list between agent, network and cloud
+- 8f89bcd: fix traces pagination + sharing trace view with cloud
+- 0bf0bc8: fix link in shared components + add e2e tests
+- f6c4d75: fix date picker on change
+- 59f0dcd: Add light background color for step statuses
+- 35b1155: Added "Semantic recall search" to playground UI chat sidebar, to search for messages and find them in the chat list
+- 8aa97c7: Show docs link in place of semantic recall + working memory in playground if they're not enabled
+- cf8d497: factorize tabs component between cloud and core
+- 7827943: Handle streaming large data
+- 808b493: wrap runtime context with tooltip provider for usage in cloud
+- 09464dd: Share AgentMetadata component with cloud
+- 65e3395: Add Scores playground-ui and add scorer hooks
+- 80692d5: refactor: sharing only the UI and not data fetching for traces
+- 80c2b06: Fix agent chat stop button to cancel stream/generate reqs in the playground
+- Updated dependencies [4832752]
+- Updated dependencies [f248d53]
+- Updated dependencies [2affc57]
+- Updated dependencies [66e13e3]
+- Updated dependencies [edd9482]
+- Updated dependencies [18344d7]
+- Updated dependencies [9d372c2]
+- Updated dependencies [40c2525]
+- Updated dependencies [e473f27]
+- Updated dependencies [032cb66]
+- Updated dependencies [703ac71]
+- Updated dependencies [a723d69]
+- Updated dependencies [7827943]
+- Updated dependencies [5889a31]
+- Updated dependencies [bf1e7e7]
+- Updated dependencies [65e3395]
+- Updated dependencies [4933192]
+- Updated dependencies [d1c77a4]
+- Updated dependencies [bea9dd1]
+- Updated dependencies [dcd4802]
+- Updated dependencies [cbddd18]
+- Updated dependencies [80c2b06]
+- Updated dependencies [7ba91fa]
+- Updated dependencies [6f6e651]
+  - @mastra/client-js@0.10.15
+  - @mastra/core@0.11.0
+
+## 5.1.14-alpha.3
+
+### Patch Changes
+
+- 8aa97c7: Show docs link in place of semantic recall + working memory in playground if they're not enabled
+
+## 5.1.14-alpha.2
+
+### Patch Changes
+
+- dd2a4c9: change the way we start the dev process of playground
+- af1f902: share thread list between agent, network and cloud
+- f6c4d75: fix date picker on change
+- 35b1155: Added "Semantic recall search" to playground UI chat sidebar, to search for messages and find them in the chat list
+- 09464dd: Share AgentMetadata component with cloud
+- 65e3395: Add Scores playground-ui and add scorer hooks
+- 80c2b06: Fix agent chat stop button to cancel stream/generate reqs in the playground
+- Updated dependencies [4832752]
+- Updated dependencies [f248d53]
+- Updated dependencies [2affc57]
+- Updated dependencies [66e13e3]
+- Updated dependencies [edd9482]
+- Updated dependencies [18344d7]
+- Updated dependencies [9d372c2]
+- Updated dependencies [40c2525]
+- Updated dependencies [e473f27]
+- Updated dependencies [032cb66]
+- Updated dependencies [703ac71]
+- Updated dependencies [a723d69]
+- Updated dependencies [5889a31]
+- Updated dependencies [65e3395]
+- Updated dependencies [4933192]
+- Updated dependencies [d1c77a4]
+- Updated dependencies [bea9dd1]
+- Updated dependencies [dcd4802]
+- Updated dependencies [80c2b06]
+- Updated dependencies [7ba91fa]
+- Updated dependencies [6f6e651]
+  - @mastra/client-js@0.10.15-alpha.2
+  - @mastra/core@0.11.0-alpha.2
+
+## 5.1.14-alpha.1
+
+### Patch Changes
+
+- 8f89bcd: fix traces pagination + sharing trace view with cloud
+- 59f0dcd: Add light background color for step statuses
+- cf8d497: factorize tabs component between cloud and core
+- 80692d5: refactor: sharing only the UI and not data fetching for traces
+  - @mastra/core@0.11.0-alpha.1
+  - @mastra/client-js@0.10.15-alpha.1
+
+## 5.1.14-alpha.0
+
+### Patch Changes
+
+- 0bf0bc8: fix link in shared components + add e2e tests
+- 7827943: Handle streaming large data
+- 808b493: wrap runtime context with tooltip provider for usage in cloud
+- Updated dependencies [7827943]
+- Updated dependencies [bf1e7e7]
+- Updated dependencies [cbddd18]
+  - @mastra/client-js@0.10.15-alpha.0
+  - @mastra/core@0.11.0-alpha.0
+
+## 5.1.13
+
+### Patch Changes
+
+- 5130bcb: dependencies updates:
+  - Updated dependency [`swr@^2.3.4` ↗︎](https://www.npmjs.com/package/swr/v/2.3.4) (from `^2.3.3`, in `dependencies`)
+- 984887a: dependencies updates:
+  - Updated dependency [`prettier@^3.6.2` ↗︎](https://www.npmjs.com/package/prettier/v/3.6.2) (from `^3.5.3`, in `dependencies`)
+- 593631d: allow to pass ref to the link abstraction
+- 5237998: Fix foreach output
+- 1aa60b1: Pipe runtimeContext to vNext network agent stream and generate steps, wire up runtimeContext for vNext Networks in cliet SDK & playground
+- d49334d: export tool list for usage in cloud
+- 9cdfcb5: fix infinite rerenders on agents table + share runtime context for cloud
+- 794d9f3: Fix thread creation in playground
+- aa9528a: Display reasoning in playground
+- 45174f3: share network list between core and cloud
+- 48f5532: export workflow list for usage in cloud
+- 626b0f4: [Cloud-126] Working Memory Playground - Added working memory to playground to allow users to view/edit working memory
+- e1d0080: abstract Link component between cloud and core
+- f9b1508: add the same agent table as in cloud and export it from the playground
+- dfbeec6: Fix navigation to vnext AgentNetwork agents
+- Updated dependencies [31f9f6b]
+- Updated dependencies [0b56518]
+- Updated dependencies [db5cc15]
+- Updated dependencies [2ba5b76]
+- Updated dependencies [5237998]
+- Updated dependencies [c3a30de]
+- Updated dependencies [37c1acd]
+- Updated dependencies [1aa60b1]
+- Updated dependencies [89ec9d4]
+- Updated dependencies [cf3a184]
+- Updated dependencies [d6bfd60]
+- Updated dependencies [626b0f4]
+- Updated dependencies [c22a91f]
+- Updated dependencies [f7403ab]
+- Updated dependencies [6c89d7f]
+  - @mastra/client-js@0.10.14
+  - @mastra/core@0.10.15
+
+## 5.1.13-alpha.2
+
+### Patch Changes
+
+- 794d9f3: Fix thread creation in playground
+- dfbeec6: Fix navigation to vnext AgentNetwork agents
+
+## 5.1.13-alpha.1
+
+### Patch Changes
+
+- d49334d: export tool list for usage in cloud
+- 9cdfcb5: fix infinite rerenders on agents table + share runtime context for cloud
+- 45174f3: share network list between core and cloud
+- 48f5532: export workflow list for usage in cloud
+- Updated dependencies [0b56518]
+- Updated dependencies [2ba5b76]
+- Updated dependencies [c3a30de]
+- Updated dependencies [cf3a184]
+- Updated dependencies [d6bfd60]
+  - @mastra/core@0.10.15-alpha.1
+  - @mastra/client-js@0.10.14-alpha.1
+
+## 5.1.13-alpha.0
+
+### Patch Changes
+
+- 5130bcb: dependencies updates:
+  - Updated dependency [`swr@^2.3.4` ↗︎](https://www.npmjs.com/package/swr/v/2.3.4) (from `^2.3.3`, in `dependencies`)
+- 984887a: dependencies updates:
+  - Updated dependency [`prettier@^3.6.2` ↗︎](https://www.npmjs.com/package/prettier/v/3.6.2) (from `^3.5.3`, in `dependencies`)
+- 593631d: allow to pass ref to the link abstraction
+- 5237998: Fix foreach output
+- 1aa60b1: Pipe runtimeContext to vNext network agent stream and generate steps, wire up runtimeContext for vNext Networks in cliet SDK & playground
+- aa9528a: Display reasoning in playground
+- 626b0f4: [Cloud-126] Working Memory Playground - Added working memory to playground to allow users to view/edit working memory
+- e1d0080: abstract Link component between cloud and core
+- f9b1508: add the same agent table as in cloud and export it from the playground
+- Updated dependencies [31f9f6b]
+- Updated dependencies [db5cc15]
+- Updated dependencies [5237998]
+- Updated dependencies [37c1acd]
+- Updated dependencies [1aa60b1]
+- Updated dependencies [89ec9d4]
+- Updated dependencies [626b0f4]
+- Updated dependencies [c22a91f]
+- Updated dependencies [f7403ab]
+- Updated dependencies [6c89d7f]
+  - @mastra/client-js@0.10.14-alpha.0
+  - @mastra/core@0.10.15-alpha.0
+
+## 5.1.12
+
+### Patch Changes
+
+- 640f47e: move agent model settings into agent settings
+- Updated dependencies [9468be4]
+- Updated dependencies [b4a9811]
+- Updated dependencies [4d5583d]
+- Updated dependencies [44731a4]
+  - @mastra/client-js@0.10.11
+  - @mastra/core@0.10.12
+
+## 5.1.12-alpha.0
+
+### Patch Changes
+
+- 640f47e: move agent model settings into agent settings
+- Updated dependencies [9468be4]
+- Updated dependencies [b4a9811]
+- Updated dependencies [44731a4]
+  - @mastra/client-js@0.10.11-alpha.0
+  - @mastra/core@0.10.12-alpha.0
+
+## 5.1.11
+
+### Patch Changes
+
+- 7fb0909: dependencies updates:
+  - Updated dependency [`@dagrejs/dagre@^1.1.5` ↗︎](https://www.npmjs.com/package/@dagrejs/dagre/v/1.1.5) (from `^1.1.4`, in `dependencies`)
+- 05ba777: dependencies updates:
+  - Updated dependency [`@xyflow/react@^12.8.1` ↗︎](https://www.npmjs.com/package/@xyflow/react/v/12.8.1) (from `^12.6.4`, in `dependencies`)
+- 7ccbf43: dependencies updates:
+  - Updated dependency [`motion@^12.23.0` ↗︎](https://www.npmjs.com/package/motion/v/12.23.0) (from `^12.16.0`, in `dependencies`)
+- 4b4b339: dependencies updates:
+  - Updated dependency [`@uiw/react-codemirror@^4.23.14` ↗︎](https://www.npmjs.com/package/@uiw/react-codemirror/v/4.23.14) (from `^4.23.13`, in `dependencies`)
+- f457d86: reset localstorage when resetting model settings
+- 8722d53: Fix multi modal remaining steps
+- 4219597: add JSON input close to form input
+- b790fd1: Use SerializedStepFlowEntry in playground
+- c1cceea: Bump peerdeps of @matra/core
+- a7a836a: Highlight send event button
+- Updated dependencies [2873c7f]
+- Updated dependencies [1c1c6a1]
+- Updated dependencies [f8ce2cc]
+- Updated dependencies [8c846b6]
+- Updated dependencies [c7bbf1e]
+- Updated dependencies [8722d53]
+- Updated dependencies [565cc0c]
+- Updated dependencies [b790fd1]
+- Updated dependencies [132027f]
+- Updated dependencies [0c85311]
+- Updated dependencies [d7ed04d]
+- Updated dependencies [18da791]
+- Updated dependencies [cb16baf]
+- Updated dependencies [f36e4f1]
+- Updated dependencies [7f6e403]
+  - @mastra/core@0.10.11
+  - @mastra/client-js@0.10.10
+
+## 5.1.11-alpha.4
+
+### Patch Changes
+
+- c1cceea: Bump peerdeps of @matra/core
+  - @mastra/core@0.10.11-alpha.4
+  - @mastra/client-js@0.10.10-alpha.4
+
+## 5.1.11-alpha.3
+
+### Patch Changes
+
+- f457d86: reset localstorage when resetting model settings
+- 8722d53: Fix multi modal remaining steps
+- Updated dependencies [c7bbf1e]
+- Updated dependencies [8722d53]
+- Updated dependencies [132027f]
+- Updated dependencies [0c85311]
+- Updated dependencies [cb16baf]
+  - @mastra/core@0.10.11-alpha.3
+  - @mastra/client-js@0.10.10-alpha.3
+
+## 5.1.11-alpha.2
+
+### Patch Changes
+
+- 7fb0909: dependencies updates:
+  - Updated dependency [`@dagrejs/dagre@^1.1.5` ↗︎](https://www.npmjs.com/package/@dagrejs/dagre/v/1.1.5) (from `^1.1.4`, in `dependencies`)
+- 05ba777: dependencies updates:
+  - Updated dependency [`@xyflow/react@^12.8.1` ↗︎](https://www.npmjs.com/package/@xyflow/react/v/12.8.1) (from `^12.6.4`, in `dependencies`)
+- 7ccbf43: dependencies updates:
+  - Updated dependency [`motion@^12.23.0` ↗︎](https://www.npmjs.com/package/motion/v/12.23.0) (from `^12.16.0`, in `dependencies`)
+- 4b4b339: dependencies updates:
+  - Updated dependency [`@uiw/react-codemirror@^4.23.14` ↗︎](https://www.npmjs.com/package/@uiw/react-codemirror/v/4.23.14) (from `^4.23.13`, in `dependencies`)
+- 4219597: add JSON input close to form input
+- Updated dependencies [2873c7f]
+- Updated dependencies [1c1c6a1]
+- Updated dependencies [565cc0c]
+- Updated dependencies [18da791]
+  - @mastra/core@0.10.11-alpha.2
+  - @mastra/client-js@0.10.10-alpha.2
+
+## 5.1.11-alpha.1
+
+### Patch Changes
+
+- a7a836a: Highlight send event button
+- Updated dependencies [7f6e403]
+  - @mastra/core@0.10.11-alpha.1
+  - @mastra/client-js@0.10.10-alpha.1
+
+## 5.1.11-alpha.0
+
+### Patch Changes
+
+- b790fd1: Use SerializedStepFlowEntry in playground
+- Updated dependencies [f8ce2cc]
+- Updated dependencies [8c846b6]
+- Updated dependencies [b790fd1]
+- Updated dependencies [d7ed04d]
+- Updated dependencies [f36e4f1]
+  - @mastra/core@0.10.11-alpha.0
+  - @mastra/client-js@0.10.10-alpha.0
+
+## 5.1.10
+
+### Patch Changes
+
+- 6997af1: add send event to server, deployer, client-js and playground-ui
+- 45f0dba: Display too-call finish reason error in playground
+- Updated dependencies [b60f510]
+- Updated dependencies [6997af1]
+- Updated dependencies [4d3fbdf]
+  - @mastra/client-js@0.10.9
+  - @mastra/core@0.10.10
+
+## 5.1.10-alpha.1
+
+### Patch Changes
+
+- 6997af1: add send event to server, deployer, client-js and playground-ui
+- Updated dependencies [b60f510]
+- Updated dependencies [6997af1]
+  - @mastra/client-js@0.10.9-alpha.1
+  - @mastra/core@0.10.10-alpha.1
+
+## 5.1.10-alpha.0
+
+### Patch Changes
+
+- 45f0dba: Display too-call finish reason error in playground
+- Updated dependencies [4d3fbdf]
+  - @mastra/core@0.10.10-alpha.0
+  - @mastra/client-js@0.10.9-alpha.0
+
+## 5.1.9
+
+### Patch Changes
+
+- 4e06e3f: timing not displayed correctly in traces
+- 7e801dd: [MASTRA-4118] fixes issue with agent network loopStream where subsequent messages aren't present in playground on refresh
+- a606c75: show right suspend schema for nested workflow on playground
+- 1760a1c: Use workflow stream in playground instead of watch
+- 038e5ae: Add cancel workflow run
+- 81a1b3b: Update peerdeps
+- ac369c6: Show resume data on workflow graph
+- 976a62b: remove persistence capabilities in model settings components
+- 4e809ad: Visualizations for .sleep()/.sleepUntil()/.waitForEvent()
+- 57929df: [MASTRA-4143[ change message-list and agent network display
+- f78f399: Make AgentModelSettings shareable between cloud and playground
+- Updated dependencies [9dda1ac]
+- Updated dependencies [9047bda]
+- Updated dependencies [c984582]
+- Updated dependencies [7e801dd]
+- Updated dependencies [a606c75]
+- Updated dependencies [7aa70a4]
+- Updated dependencies [764f86a]
+- Updated dependencies [1760a1c]
+- Updated dependencies [038e5ae]
+- Updated dependencies [7dda16a]
+- Updated dependencies [5ebfcdd]
+- Updated dependencies [b2d0c91]
+- Updated dependencies [4e809ad]
+- Updated dependencies [57929df]
+- Updated dependencies [7e801dd]
+- Updated dependencies [b7852ed]
+- Updated dependencies [6320a61]
+  - @mastra/core@0.10.9
+  - @mastra/client-js@0.10.8
+
+## 5.1.9-alpha.0
+
+### Patch Changes
+
+- 4e06e3f: timing not displayed correctly in traces
+- 7e801dd: [MASTRA-4118] fixes issue with agent network loopStream where subsequent messages aren't present in playground on refresh
+- a606c75: show right suspend schema for nested workflow on playground
+- 1760a1c: Use workflow stream in playground instead of watch
+- 038e5ae: Add cancel workflow run
+- 81a1b3b: Update peerdeps
+- ac369c6: Show resume data on workflow graph
+- 976a62b: remove persistence capabilities in model settings components
+- 4e809ad: Visualizations for .sleep()/.sleepUntil()/.waitForEvent()
+- 57929df: [MASTRA-4143[ change message-list and agent network display
+- f78f399: Make AgentModelSettings shareable between cloud and playground
+- Updated dependencies [9dda1ac]
+- Updated dependencies [9047bda]
+- Updated dependencies [c984582]
+- Updated dependencies [7e801dd]
+- Updated dependencies [a606c75]
+- Updated dependencies [7aa70a4]
+- Updated dependencies [764f86a]
+- Updated dependencies [1760a1c]
+- Updated dependencies [038e5ae]
+- Updated dependencies [7dda16a]
+- Updated dependencies [5ebfcdd]
+- Updated dependencies [b2d0c91]
+- Updated dependencies [4e809ad]
+- Updated dependencies [57929df]
+- Updated dependencies [7e801dd]
+- Updated dependencies [b7852ed]
+- Updated dependencies [6320a61]
+  - @mastra/core@0.10.9-alpha.0
+  - @mastra/client-js@0.10.8-alpha.0
+
 ## 5.1.8
 
 ### Patch Changes

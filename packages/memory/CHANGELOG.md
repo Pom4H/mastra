@@ -1,5 +1,531 @@
 # @mastra/memory
 
+## 0.13.1
+
+### Patch Changes
+
+- [#6919](https://github.com/mastra-ai/mastra/pull/6919) [`6e7e120`](https://github.com/mastra-ai/mastra/commit/6e7e1207d6e8d8b838f9024f90bd10df1181ba27) Thanks [@dane-ai-mastra](https://github.com/apps/dane-ai-mastra)! - dependencies updates:
+  - Updated dependency [`ai@^4.3.19` ↗︎](https://www.npmjs.com/package/ai/v/4.3.19) (from `^4.3.16`, in `dependencies`)
+  - Updated dependency [`ai-v5@npm:ai@5.0.15` ↗︎](https://www.npmjs.com/package/ai-v5/v/5.0.15) (from `npm:ai@5.0.0`, in `dependencies`)
+
+- [#6921](https://github.com/mastra-ai/mastra/pull/6921) [`c4f2605`](https://github.com/mastra-ai/mastra/commit/c4f2605fa00e796a26c6f5fc3cf8f5552f77d617) Thanks [@dane-ai-mastra](https://github.com/apps/dane-ai-mastra)! - dependencies updates:
+  - Updated dependency [`redis@^5.8.2` ↗︎](https://www.npmjs.com/package/redis/v/5.8.2) (from `^5.8.1`, in `dependencies`)
+- Updated dependencies [[`6e7e120`](https://github.com/mastra-ai/mastra/commit/6e7e1207d6e8d8b838f9024f90bd10df1181ba27), [`0f00e17`](https://github.com/mastra-ai/mastra/commit/0f00e172953ccdccadb35ed3d70f5e4d89115869), [`217cd7a`](https://github.com/mastra-ai/mastra/commit/217cd7a4ce171e9a575c41bb8c83300f4db03236), [`a5a23d9`](https://github.com/mastra-ai/mastra/commit/a5a23d981920d458dc6078919992a5338931ef02)]:
+  - @mastra/core@0.14.1
+
+## 0.13.1-alpha.0
+
+### Patch Changes
+
+- [#6919](https://github.com/mastra-ai/mastra/pull/6919) [`6e7e120`](https://github.com/mastra-ai/mastra/commit/6e7e1207d6e8d8b838f9024f90bd10df1181ba27) Thanks [@dane-ai-mastra](https://github.com/apps/dane-ai-mastra)! - dependencies updates:
+  - Updated dependency [`ai@^4.3.19` ↗︎](https://www.npmjs.com/package/ai/v/4.3.19) (from `^4.3.16`, in `dependencies`)
+  - Updated dependency [`ai-v5@npm:ai@5.0.15` ↗︎](https://www.npmjs.com/package/ai-v5/v/5.0.15) (from `npm:ai@5.0.0`, in `dependencies`)
+
+- [#6921](https://github.com/mastra-ai/mastra/pull/6921) [`c4f2605`](https://github.com/mastra-ai/mastra/commit/c4f2605fa00e796a26c6f5fc3cf8f5552f77d617) Thanks [@dane-ai-mastra](https://github.com/apps/dane-ai-mastra)! - dependencies updates:
+  - Updated dependency [`redis@^5.8.2` ↗︎](https://www.npmjs.com/package/redis/v/5.8.2) (from `^5.8.1`, in `dependencies`)
+- Updated dependencies [[`6e7e120`](https://github.com/mastra-ai/mastra/commit/6e7e1207d6e8d8b838f9024f90bd10df1181ba27), [`a5a23d9`](https://github.com/mastra-ai/mastra/commit/a5a23d981920d458dc6078919992a5338931ef02)]:
+  - @mastra/core@0.14.1-alpha.0
+
+## 0.13.0
+
+### Minor Changes
+
+- 03997ae: Update peer deps of core
+
+### Patch Changes
+
+- 8a41506: dependencies updates:
+  - Updated dependency [`redis@^5.8.1` ↗︎](https://www.npmjs.com/package/redis/v/5.8.1) (from `^5.8.0`, in `dependencies`)
+- 2454423: Agentic loop and streaming workflow: generateVNext and streamVNext
+- Updated dependencies [227c7e6]
+- Updated dependencies [12cae67]
+- Updated dependencies [fd3a3eb]
+- Updated dependencies [6faaee5]
+- Updated dependencies [4232b14]
+- Updated dependencies [a89de7e]
+- Updated dependencies [5a37d0c]
+- Updated dependencies [4bde0cb]
+- Updated dependencies [cf4f357]
+- Updated dependencies [ad888a2]
+- Updated dependencies [481751d]
+- Updated dependencies [2454423]
+- Updated dependencies [194e395]
+- Updated dependencies [a722c0b]
+- Updated dependencies [c30bca8]
+- Updated dependencies [3b5fec7]
+- Updated dependencies [a8f129d]
+  - @mastra/core@0.14.0
+
+## 0.13.0-alpha.1
+
+### Minor Changes
+
+- 03997ae: Update peer deps of core
+
+### Patch Changes
+
+- @mastra/core@0.14.0-alpha.7
+
+## 0.12.3-alpha.0
+
+### Patch Changes
+
+- 8a41506: dependencies updates:
+  - Updated dependency [`redis@^5.8.1` ↗︎](https://www.npmjs.com/package/redis/v/5.8.1) (from `^5.8.0`, in `dependencies`)
+- 2454423: generateVNext and streamVNext
+- a741dde: generateVNext plumbing
+- e2ed127: Memory tests checkin
+- Updated dependencies [0a7f675]
+- Updated dependencies [12cae67]
+- Updated dependencies [5a37d0c]
+- Updated dependencies [4bde0cb]
+- Updated dependencies [1a80071]
+- Updated dependencies [36a3be8]
+- Updated dependencies [361757b]
+- Updated dependencies [2bb9955]
+- Updated dependencies [2454423]
+- Updated dependencies [a44d91e]
+- Updated dependencies [dfb91e9]
+- Updated dependencies [a741dde]
+- Updated dependencies [7cb3fc0]
+- Updated dependencies [195eabb]
+- Updated dependencies [b78b95b]
+  - @mastra/core@0.14.0-alpha.4
+
+## 0.12.2
+
+### Patch Changes
+
+- da62f49: When using a schema for working memory, make that the tools schema so the agent better understands the schema.
+- 2fff911: Fix vnext working memory tool schema when model is incompatible with schema
+- Updated dependencies [d5330bf]
+- Updated dependencies [2e74797]
+- Updated dependencies [8388649]
+- Updated dependencies [a239d41]
+- Updated dependencies [dd94a26]
+- Updated dependencies [3ba6772]
+- Updated dependencies [b5cf2a3]
+- Updated dependencies [2fff911]
+- Updated dependencies [b32c50d]
+- Updated dependencies [63449d0]
+- Updated dependencies [121a3f8]
+- Updated dependencies [ec510e7]
+- Updated dependencies [ae2eb63]
+  - @mastra/core@0.13.2
+  - @mastra/schema-compat@0.10.7
+
+## 0.12.2-alpha.2
+
+### Patch Changes
+
+- Updated dependencies [d5330bf]
+- Updated dependencies [a239d41]
+- Updated dependencies [b32c50d]
+- Updated dependencies [121a3f8]
+- Updated dependencies [ec510e7]
+- Updated dependencies [ae2eb63]
+  - @mastra/core@0.13.2-alpha.2
+  - @mastra/schema-compat@0.10.7-alpha.1
+
+## 0.12.2-alpha.1
+
+### Patch Changes
+
+- da62f49: When using a schema for working memory, make that the tools schema so the agent better understands the schema.
+- Updated dependencies [2e74797]
+- Updated dependencies [63449d0]
+  - @mastra/core@0.13.2-alpha.1
+
+## 0.12.2-alpha.0
+
+### Patch Changes
+
+- 2fff911: Fix vnext working memory tool schema when model is incompatible with schema
+- Updated dependencies [8388649]
+- Updated dependencies [dd94a26]
+- Updated dependencies [3ba6772]
+- Updated dependencies [2fff911]
+  - @mastra/core@0.13.2-alpha.0
+
+## 0.12.1
+
+### Patch Changes
+
+- 7d53af4: dependencies updates:
+  - Updated dependency [`redis@^5.7.0` ↗︎](https://www.npmjs.com/package/redis/v/5.7.0) (from `^5.6.0`, in `dependencies`)
+- e1a2ef1: dependencies updates:
+  - Updated dependency [`@upstash/redis@^1.35.3` ↗︎](https://www.npmjs.com/package/@upstash/redis/v/1.35.3) (from `^1.35.1`, in `dependencies`)
+- f082460: dependencies updates:
+  - Updated dependency [`redis@^5.8.0` ↗︎](https://www.npmjs.com/package/redis/v/5.8.0) (from `^5.7.0`, in `dependencies`)
+- e202b82: Add getThreadsByResourceIdPaginated to the Memory Class
+- 4a406ec: fixes TypeScript declaration file imports to ensure proper ESM compatibility
+- Updated dependencies [cb36de0]
+- Updated dependencies [d0496e6]
+- Updated dependencies [a82b851]
+- Updated dependencies [ea0c5f2]
+- Updated dependencies [41a0a0e]
+- Updated dependencies [2871020]
+- Updated dependencies [94f4812]
+- Updated dependencies [e202b82]
+- Updated dependencies [e00f6a0]
+- Updated dependencies [4a406ec]
+- Updated dependencies [b0e43c1]
+- Updated dependencies [5d377e5]
+- Updated dependencies [1fb812e]
+- Updated dependencies [35c5798]
+  - @mastra/core@0.13.0
+
+## 0.12.1-alpha.2
+
+### Patch Changes
+
+- e1a2ef1: dependencies updates:
+  - Updated dependency [`@upstash/redis@^1.35.3` ↗︎](https://www.npmjs.com/package/@upstash/redis/v/1.35.3) (from `^1.35.1`, in `dependencies`)
+- f082460: dependencies updates:
+  - Updated dependency [`redis@^5.8.0` ↗︎](https://www.npmjs.com/package/redis/v/5.8.0) (from `^5.7.0`, in `dependencies`)
+- 4a406ec: fixes TypeScript declaration file imports to ensure proper ESM compatibility
+- Updated dependencies [cb36de0]
+- Updated dependencies [a82b851]
+- Updated dependencies [41a0a0e]
+- Updated dependencies [2871020]
+- Updated dependencies [4a406ec]
+- Updated dependencies [5d377e5]
+  - @mastra/core@0.13.0-alpha.2
+
+## 0.12.1-alpha.1
+
+### Patch Changes
+
+- 7d53af4: dependencies updates:
+  - Updated dependency [`redis@^5.7.0` ↗︎](https://www.npmjs.com/package/redis/v/5.7.0) (from `^5.6.0`, in `dependencies`)
+- Updated dependencies [ea0c5f2]
+- Updated dependencies [b0e43c1]
+- Updated dependencies [1fb812e]
+- Updated dependencies [35c5798]
+  - @mastra/core@0.13.0-alpha.1
+
+## 0.12.1-alpha.0
+
+### Patch Changes
+
+- e202b82: Add getThreadsByResourceIdPaginated to the Memory Class
+- Updated dependencies [94f4812]
+- Updated dependencies [e202b82]
+- Updated dependencies [e00f6a0]
+  - @mastra/core@0.12.2-alpha.0
+
+## 0.12.0
+
+### Minor Changes
+
+- f42c4c2: update peer deps for packages to latest core range
+
+### Patch Changes
+
+- 674a348: dependencies updates:
+  - Updated dependency [`@upstash/redis@^1.35.1` ↗︎](https://www.npmjs.com/package/@upstash/redis/v/1.35.1) (from `^1.35.0`, in `dependencies`)
+- cda801d: Added the ability to pass in metadata for UIMessage and MastraMessageV2 in client-js and agent.stream/generate
+- ff9c125: enhance thread retrieval with sorting options in libsql and pg
+- b8efbb9: feat: add flexible deleteMessages method to memory API
+  - Added `memory.deleteMessages(input)` method that accepts multiple input types:
+    - Single message ID as string: `deleteMessages('msg-123')`
+    - Array of message IDs: `deleteMessages(['msg-1', 'msg-2'])`
+    - Message object with id property: `deleteMessages({ id: 'msg-123' })`
+    - Array of message objects: `deleteMessages([{ id: 'msg-1' }, { id: 'msg-2' }])`
+  - Implemented in all storage adapters (LibSQL, PostgreSQL, Upstash, InMemory)
+  - Added REST API endpoint: `POST /api/memory/messages/delete`
+  - Updated client SDK: `thread.deleteMessages()` accepts all input types
+  - Updates thread timestamps when messages are deleted
+  - Added comprehensive test coverage and documentation
+
+- ad8a1d8: Fix inheriting storage from Mastra instance in Memory
+- Updated dependencies [510e2c8]
+- Updated dependencies [2f72fb2]
+- Updated dependencies [27cc97a]
+- Updated dependencies [3f89307]
+- Updated dependencies [9eda7d4]
+- Updated dependencies [9d49408]
+- Updated dependencies [41daa63]
+- Updated dependencies [ad0a58b]
+- Updated dependencies [254a36b]
+- Updated dependencies [2ecf658]
+- Updated dependencies [7a7754f]
+- Updated dependencies [fc92d80]
+- Updated dependencies [e0f73c6]
+- Updated dependencies [0b89602]
+- Updated dependencies [4d37822]
+- Updated dependencies [23a6a7c]
+- Updated dependencies [cda801d]
+- Updated dependencies [a77c823]
+- Updated dependencies [ff9c125]
+- Updated dependencies [09bca64]
+- Updated dependencies [b8efbb9]
+- Updated dependencies [71466e7]
+- Updated dependencies [0c99fbe]
+  - @mastra/core@0.12.0
+
+## 0.12.0-alpha.3
+
+### Minor Changes
+
+- f42c4c2: update peer deps for packages to latest core range
+
+### Patch Changes
+
+- @mastra/core@0.12.0-alpha.5
+
+## 0.11.6-alpha.2
+
+### Patch Changes
+
+- ff9c125: enhance thread retrieval with sorting options in libsql and pg
+- b8efbb9: feat: add flexible deleteMessages method to memory API
+  - Added `memory.deleteMessages(input)` method that accepts multiple input types:
+    - Single message ID as string: `deleteMessages('msg-123')`
+    - Array of message IDs: `deleteMessages(['msg-1', 'msg-2'])`
+    - Message object with id property: `deleteMessages({ id: 'msg-123' })`
+    - Array of message objects: `deleteMessages([{ id: 'msg-1' }, { id: 'msg-2' }])`
+  - Implemented in all storage adapters (LibSQL, PostgreSQL, Upstash, InMemory)
+  - Added REST API endpoint: `POST /api/memory/messages/delete`
+  - Updated client SDK: `thread.deleteMessages()` accepts all input types
+  - Updates thread timestamps when messages are deleted
+  - Added comprehensive test coverage and documentation
+
+- Updated dependencies [27cc97a]
+- Updated dependencies [41daa63]
+- Updated dependencies [254a36b]
+- Updated dependencies [0b89602]
+- Updated dependencies [4d37822]
+- Updated dependencies [ff9c125]
+- Updated dependencies [b8efbb9]
+- Updated dependencies [71466e7]
+- Updated dependencies [0c99fbe]
+  - @mastra/core@0.12.0-alpha.2
+
+## 0.11.6-alpha.1
+
+### Patch Changes
+
+- cda801d: Added the ability to pass in metadata for UIMessage and MastraMessageV2 in client-js and agent.stream/generate
+- Updated dependencies [e0f73c6]
+- Updated dependencies [cda801d]
+- Updated dependencies [a77c823]
+  - @mastra/core@0.12.0-alpha.1
+
+## 0.11.6-alpha.0
+
+### Patch Changes
+
+- 674a348: dependencies updates:
+  - Updated dependency [`@upstash/redis@^1.35.1` ↗︎](https://www.npmjs.com/package/@upstash/redis/v/1.35.1) (from `^1.35.0`, in `dependencies`)
+- ad8a1d8: Fix inheriting storage from Mastra instance in Memory
+- Updated dependencies [510e2c8]
+- Updated dependencies [2f72fb2]
+- Updated dependencies [3f89307]
+- Updated dependencies [9eda7d4]
+- Updated dependencies [9d49408]
+- Updated dependencies [2ecf658]
+- Updated dependencies [7a7754f]
+- Updated dependencies [fc92d80]
+- Updated dependencies [23a6a7c]
+- Updated dependencies [09bca64]
+  - @mastra/core@0.12.0-alpha.0
+
+## 0.11.5
+
+### Patch Changes
+
+- ce088f5: Update all peerdeps to latest core
+  - @mastra/core@0.11.1
+
+## 0.11.4
+
+### Patch Changes
+
+- 138f4a2: dependencies updates:
+  - Updated dependency [`redis@^5.6.0` ↗︎](https://www.npmjs.com/package/redis/v/5.6.0) (from `^4.7.1`, in `dependencies`)
+- Updated dependencies [f248d53]
+- Updated dependencies [2affc57]
+- Updated dependencies [66e13e3]
+- Updated dependencies [edd9482]
+- Updated dependencies [18344d7]
+- Updated dependencies [9d372c2]
+- Updated dependencies [40c2525]
+- Updated dependencies [e473f27]
+- Updated dependencies [032cb66]
+- Updated dependencies [703ac71]
+- Updated dependencies [a723d69]
+- Updated dependencies [7827943]
+- Updated dependencies [5889a31]
+- Updated dependencies [bf1e7e7]
+- Updated dependencies [65e3395]
+- Updated dependencies [4933192]
+- Updated dependencies [d1c77a4]
+- Updated dependencies [bea9dd1]
+- Updated dependencies [dcd4802]
+- Updated dependencies [cbddd18]
+- Updated dependencies [7ba91fa]
+  - @mastra/core@0.11.0
+
+## 0.11.4-alpha.0
+
+### Patch Changes
+
+- 138f4a2: dependencies updates:
+  - Updated dependency [`redis@^5.6.0` ↗︎](https://www.npmjs.com/package/redis/v/5.6.0) (from `^4.7.1`, in `dependencies`)
+- Updated dependencies [7827943]
+- Updated dependencies [bf1e7e7]
+- Updated dependencies [cbddd18]
+  - @mastra/core@0.11.0-alpha.0
+
+## 0.11.3
+
+### Patch Changes
+
+- 4b20131: Fixed an issue where per-resource semantic recall wouldn't always be enabled properly in agent tool calls
+- 2ba5b76: Allow passing jsonSchema into workingMemory schema
+- c3a30de: added new experimental vnext working memory
+- 626b0f4: [Cloud-126] Working Memory Playground - Added working memory to playground to allow users to view/edit working memory
+- Updated dependencies [0b56518]
+- Updated dependencies [db5cc15]
+- Updated dependencies [2ba5b76]
+- Updated dependencies [5237998]
+- Updated dependencies [c3a30de]
+- Updated dependencies [37c1acd]
+- Updated dependencies [1aa60b1]
+- Updated dependencies [89ec9d4]
+- Updated dependencies [cf3a184]
+- Updated dependencies [d6bfd60]
+- Updated dependencies [626b0f4]
+- Updated dependencies [c22a91f]
+- Updated dependencies [f7403ab]
+- Updated dependencies [6c89d7f]
+  - @mastra/core@0.10.15
+
+## 0.11.3-alpha.1
+
+### Patch Changes
+
+- 2ba5b76: Allow passing jsonSchema into workingMemory schema
+- c3a30de: added new experimental vnext working memory
+- Updated dependencies [0b56518]
+- Updated dependencies [2ba5b76]
+- Updated dependencies [c3a30de]
+- Updated dependencies [cf3a184]
+- Updated dependencies [d6bfd60]
+  - @mastra/core@0.10.15-alpha.1
+
+## 0.11.3-alpha.0
+
+### Patch Changes
+
+- 4b20131: Fixed an issue where per-resource semantic recall wouldn't always be enabled properly in agent tool calls
+- 626b0f4: [Cloud-126] Working Memory Playground - Added working memory to playground to allow users to view/edit working memory
+- Updated dependencies [db5cc15]
+- Updated dependencies [5237998]
+- Updated dependencies [37c1acd]
+- Updated dependencies [1aa60b1]
+- Updated dependencies [89ec9d4]
+- Updated dependencies [626b0f4]
+- Updated dependencies [c22a91f]
+- Updated dependencies [f7403ab]
+- Updated dependencies [6c89d7f]
+  - @mastra/core@0.10.15-alpha.0
+
+## 0.11.2
+
+### Patch Changes
+
+- fb2a1b9: dependencies updates:
+  - Updated dependency [`pg@^8.16.3` ↗︎](https://www.npmjs.com/package/pg/v/8.16.3) (from `^8.16.0`, in `dependencies`)
+- bc2bbdc: dependencies updates:
+  - Updated dependency [`pg-pool@^3.10.1` ↗︎](https://www.npmjs.com/package/pg-pool/v/3.10.1) (from `^3.10.0`, in `dependencies`)
+- Updated dependencies [2873c7f]
+- Updated dependencies [1c1c6a1]
+- Updated dependencies [f8ce2cc]
+- Updated dependencies [8c846b6]
+- Updated dependencies [c7bbf1e]
+- Updated dependencies [8722d53]
+- Updated dependencies [565cc0c]
+- Updated dependencies [b790fd1]
+- Updated dependencies [132027f]
+- Updated dependencies [0c85311]
+- Updated dependencies [d7ed04d]
+- Updated dependencies [cb16baf]
+- Updated dependencies [f36e4f1]
+- Updated dependencies [7f6e403]
+  - @mastra/core@0.10.11
+
+## 0.11.2-alpha.1
+
+### Patch Changes
+
+- bc2bbdc: dependencies updates:
+  - Updated dependency [`pg-pool@^3.10.1` ↗︎](https://www.npmjs.com/package/pg-pool/v/3.10.1) (from `^3.10.0`, in `dependencies`)
+- Updated dependencies [2873c7f]
+- Updated dependencies [1c1c6a1]
+- Updated dependencies [565cc0c]
+  - @mastra/core@0.10.11-alpha.2
+
+## 0.11.2-alpha.0
+
+### Patch Changes
+
+- fb2a1b9: dependencies updates:
+  - Updated dependency [`pg@^8.16.3` ↗︎](https://www.npmjs.com/package/pg/v/8.16.3) (from `^8.16.0`, in `dependencies`)
+- Updated dependencies [f8ce2cc]
+- Updated dependencies [8c846b6]
+- Updated dependencies [b790fd1]
+- Updated dependencies [d7ed04d]
+- Updated dependencies [f36e4f1]
+  - @mastra/core@0.10.11-alpha.0
+
+## 0.11.1
+
+### Patch Changes
+
+- 81a1b3b: Update peerdeps
+- b7852ed: [MASTRA-4139] make private functions protected in memory
+- Updated dependencies [9dda1ac]
+- Updated dependencies [c984582]
+- Updated dependencies [7e801dd]
+- Updated dependencies [a606c75]
+- Updated dependencies [7aa70a4]
+- Updated dependencies [764f86a]
+- Updated dependencies [1760a1c]
+- Updated dependencies [038e5ae]
+- Updated dependencies [7dda16a]
+- Updated dependencies [5ebfcdd]
+- Updated dependencies [b2d0c91]
+- Updated dependencies [4e809ad]
+- Updated dependencies [57929df]
+- Updated dependencies [b7852ed]
+- Updated dependencies [6320a61]
+  - @mastra/core@0.10.9
+
+## 0.11.1-alpha.0
+
+### Patch Changes
+
+- 81a1b3b: Update peerdeps
+- b7852ed: [MASTRA-4139] make private functions protected in memory
+- Updated dependencies [9dda1ac]
+- Updated dependencies [c984582]
+- Updated dependencies [7e801dd]
+- Updated dependencies [a606c75]
+- Updated dependencies [7aa70a4]
+- Updated dependencies [764f86a]
+- Updated dependencies [1760a1c]
+- Updated dependencies [038e5ae]
+- Updated dependencies [7dda16a]
+- Updated dependencies [5ebfcdd]
+- Updated dependencies [b2d0c91]
+- Updated dependencies [4e809ad]
+- Updated dependencies [57929df]
+- Updated dependencies [b7852ed]
+- Updated dependencies [6320a61]
+  - @mastra/core@0.10.9-alpha.0
+
 ## 0.11.0
 
 ### Minor Changes

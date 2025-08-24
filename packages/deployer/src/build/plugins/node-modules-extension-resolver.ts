@@ -2,6 +2,7 @@ import { dirname, extname } from 'path';
 import resolveFrom from 'resolve-from';
 import type { Plugin } from 'rollup';
 import { builtinModules } from 'node:module';
+import { getPackageName } from '../utils';
 
 /**
  * Check if a module is a Node.js builtin module
@@ -22,16 +23,6 @@ function safeResolve(id: string, importer: string) {
   } catch {
     return null;
   }
-}
-
-function getPackageName(id: string) {
-  const parts = id.split('/');
-
-  if (id.startsWith('@')) {
-    return parts.slice(0, 2).join('/');
-  }
-
-  return parts[0];
 }
 
 // we only need this for dev, so we can resolve the js extension of the module as we do not use node-resolve
@@ -73,6 +64,15 @@ export function nodeModulesExtensionResolver(): Plugin {
 
         return null;
       } catch (e) {
+        // try to do a node like resolve first
+        const resolved = safeResolve(id, importer);
+        if (resolved) {
+          return {
+            id: resolved,
+            external: true,
+          };
+        }
+
         for (const ext of ['.mjs', '.js', '.cjs']) {
           const resolved = safeResolve(id + ext, importer);
           if (resolved) {

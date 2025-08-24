@@ -1,16 +1,18 @@
 import type { Mastra, SerializedStepFlowEntry } from '..';
+import type { AnyAISpan } from '../ai-tracing';
 import { MastraBase } from '../base';
 import type { RuntimeContext } from '../di';
 import { RegisteredLogger } from '../logger';
+import type { ChunkType } from '../stream/types';
 import type { Emitter, StepResult } from './types';
 import type { StepFlowEntry } from '.';
 
 /**
  * Represents an execution graph for a workflow
  */
-export interface ExecutionGraph {
+export interface ExecutionGraph<TEngineType = any> {
   id: string;
-  steps: StepFlowEntry[];
+  steps: StepFlowEntry<TEngineType>[];
   // Additional properties will be added in future implementations
 }
 /**
@@ -48,10 +50,12 @@ export abstract class ExecutionEngine extends MastraBase {
     };
     emitter: Emitter;
     runtimeContext: RuntimeContext;
+    parentAISpan?: AnyAISpan;
     retryConfig?: {
       attempts?: number;
       delay?: number;
     };
     abortController: AbortController;
+    writableStream?: WritableStream<ChunkType>;
   }): Promise<TOutput>;
 }

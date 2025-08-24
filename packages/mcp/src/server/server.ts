@@ -231,7 +231,7 @@ export class MCPServer extends MCPServerBase {
     });
 
     // Call tool handler
-    serverInstance.setRequestHandler(CallToolRequestSchema, async request => {
+    serverInstance.setRequestHandler(CallToolRequestSchema, async (request, extra) => {
       const startTime = Date.now();
       try {
         const tool = this.convertedTools[request.params.name] as MCPTool;
@@ -248,9 +248,25 @@ export class MCPServer extends MCPServerBase {
           this.logger.warn(`CallTool: Invalid tool arguments for '${request.params.name}'`, {
             errors: validation.error,
           });
+
+          // Format validation errors for agent understanding
+          let errorMessages = 'Validation failed';
+          if ('errors' in validation.error && Array.isArray(validation.error.errors)) {
+            errorMessages = validation.error.errors
+              .map((e: any) => `- ${e.path?.join('.') || 'root'}: ${e.message}`)
+              .join('\n');
+          } else if (validation.error instanceof Error) {
+            errorMessages = validation.error.message;
+          }
+
           return {
-            content: [{ type: 'text', text: `Invalid tool arguments: ${JSON.stringify(validation.error)}` }],
-            isError: true,
+            content: [
+              {
+                type: 'text',
+                text: `Tool validation failed. Please fix the following errors and try again:\n${errorMessages}\n\nProvided arguments: ${JSON.stringify(request.params.arguments, null, 2)}`,
+              },
+            ],
+            isError: true, // Set to true so the LLM sees the error and can self-correct
           };
         }
         if (!tool.execute) {
@@ -268,10 +284,11 @@ export class MCPServer extends MCPServerBase {
           },
         };
 
-        const result = await tool.execute(validation?.value, {
+        const result = await tool.execute(validation?.value ?? request.params.arguments ?? {}, {
           messages: [],
           toolCallId: '',
           elicitation: sessionElicitation,
+          extra,
         });
 
         this.logger.debug(`CallTool: Tool '${request.params.name}' executed successfully with result:`, result);
@@ -281,10 +298,17 @@ export class MCPServer extends MCPServerBase {
         const response: CallToolResult = { isError: false, content: [] };
 
         if (tool.outputSchema) {
-          if (!result.structuredContent) {
-            throw new Error(`Tool ${request.params.name} has an output schema but no structured content was provided.`);
+          // Handle both cases: tools that return { structuredContent: ... } and tools that return the plain object
+          let structuredContent;
+          if (result && typeof result === 'object' && 'structuredContent' in result) {
+            // Tool returned { structuredContent: ... } format (MCP-aware tool)
+            structuredContent = result.structuredContent;
+          } else {
+            // Tool returned plain object, wrap it automatically for backward compatibility
+            structuredContent = result;
           }
-          const outputValidation = tool.outputSchema.validate?.(result.structuredContent ?? {});
+
+          const outputValidation = tool.outputSchema.validate?.(structuredContent ?? {});
           if (outputValidation && !outputValidation.success) {
             this.logger.warn(`CallTool: Invalid structured content for '${request.params.name}'`, {
               errors: outputValidation.error,
@@ -293,7 +317,7 @@ export class MCPServer extends MCPServerBase {
               `Invalid structured content for tool ${request.params.name}: ${JSON.stringify(outputValidation.error)}`,
             );
           }
-          response.structuredContent = result.structuredContent;
+          response.structuredContent = structuredContent;
         }
 
         if (response.structuredContent) {
@@ -1173,10 +1197,10 @@ export class MCPServer extends MCPServerBase {
       while (true) {
         // This will keep the connection alive
         // You can also await for a promise that never resolves
+        await stream.sleep(60_000);
         const sessionIds = Array.from(this.sseHonoTransports.keys() || []);
         this.logger.debug('Active Hono SSE sessions:', { sessionIds });
         await stream.write(':keep-alive\n\n');
-        await stream.sleep(60_000);
       }
     } catch (e) {
       const mastraError = new MastraError(
@@ -1348,12 +1372,17 @@ export class MCPServer extends MCPServerBase {
         const validation = tool.parameters.safeParse(args ?? {});
         if (!validation.success) {
           const errorMessages = validation.error.errors
-            .map((e: z.ZodIssue) => `${e.path.join('.')}: ${e.message}`)
-            .join(', ');
+            .map((e: z.ZodIssue) => `- ${e.path?.join('.') || 'root'}: ${e.message}`)
+            .join('\n');
           this.logger.warn(`ExecuteTool: Invalid tool arguments for '${toolId}': ${errorMessages}`, {
             errors: validation.error.format(),
           });
-          throw new z.ZodError(validation.error.issues);
+          // Return validation error as a result instead of throwing
+          return {
+            error: true,
+            message: `Tool validation failed. Please fix the following errors and try again:\n${errorMessages}\n\nProvided arguments: ${JSON.stringify(args, null, 2)}`,
+            validationErrors: validation.error.format(),
+          };
         }
         validatedArgs = validation.data;
       } else {

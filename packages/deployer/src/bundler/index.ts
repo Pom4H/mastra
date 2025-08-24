@@ -7,19 +7,16 @@ import { MastraError, ErrorDomain, ErrorCategory } from '@mastra/core/error';
 import virtual from '@rollup/plugin-virtual';
 import fsExtra, { copy, ensureDir, readJSON, emptyDir } from 'fs-extra/esm';
 import { globby } from 'globby';
-import resolveFrom from 'resolve-from';
 import type { InputOptions, OutputOptions } from 'rollup';
-
 import { analyzeBundle } from '../build/analyze';
 import { createBundler as createBundlerUtil, getInputOptions } from '../build/bundler';
+import { getBundlerOptions } from '../build/bundlerOptions';
+import { writeCustomInstrumentation } from '../build/customInstrumentation';
 import { writeTelemetryConfig } from '../build/telemetry';
+import { getPackageRootPath } from '../build/utils';
 import { DepsService } from '../services/deps';
 import { FileService } from '../services/fs';
-import {
-  collectTransitiveWorkspaceDependencies,
-  createWorkspacePackageMap,
-  packWorkspaceDependencies,
-} from './workspaceDependencies';
+import { collectTransitiveWorkspaceDependencies, packWorkspaceDependencies } from './workspaceDependencies';
 
 export abstract class Bundler extends MastraBundler {
   protected analyzeOutputDir = '.build';
@@ -37,11 +34,15 @@ export abstract class Bundler extends MastraBundler {
     await ensureDir(join(outputDirectory, this.outputDir));
   }
 
-  async writeInstrumentationFile(outputDirectory: string) {
+  async writeInstrumentationFile(outputDirectory: string, customInstrumentationFile?: string) {
     const instrumentationFile = join(outputDirectory, 'instrumentation.mjs');
     const __dirname = dirname(fileURLToPath(import.meta.url));
 
-    await copy(join(__dirname, 'templates', 'instrumentation-template.js'), instrumentationFile);
+    if (customInstrumentationFile) {
+      await copy(customInstrumentationFile, instrumentationFile);
+    } else {
+      await copy(join(__dirname, 'templates', 'instrumentation-template.js'), instrumentationFile);
+    }
   }
 
   async writePackageJson(
@@ -137,15 +138,40 @@ export abstract class Bundler extends MastraBundler {
     await copy(publicDir, join(outputDirectory, this.outputDir));
   }
 
+  protected async copyDOTNPMRC({
+    rootDir = process.cwd(),
+    outputDirectory,
+  }: {
+    rootDir?: string;
+    outputDirectory: string;
+  }) {
+    const sourceDotNpmRcPath = join(rootDir, '.npmrc');
+    const targetDotNpmRcPath = join(outputDirectory, this.outputDir, '.npmrc');
+
+    try {
+      await stat(sourceDotNpmRcPath);
+      await copy(sourceDotNpmRcPath, targetDotNpmRcPath);
+    } catch {
+      return;
+    }
+  }
+
   protected async getBundlerOptions(
     serverFile: string,
     mastraEntryFile: string,
     analyzedBundleInfo: Awaited<ReturnType<typeof analyzeBundle>>,
-    toolsPaths: string[],
+    toolsPaths: (string | string[])[],
+    sourcemapEnabled: boolean = false,
   ) {
-    const inputOptions: InputOptions = await getInputOptions(mastraEntryFile, analyzedBundleInfo, 'node', {
-      'process.env.NODE_ENV': JSON.stringify('production'),
-    });
+    const inputOptions: InputOptions = await getInputOptions(
+      mastraEntryFile,
+      analyzedBundleInfo,
+      'node',
+      {
+        'process.env.NODE_ENV': JSON.stringify('production'),
+      },
+      { sourcemap: sourcemapEnabled },
+    );
     const isVirtual = serverFile.includes('\n') || existsSync(serverFile);
 
     const toolsInputOptions = await this.getToolsInputOptions(toolsPaths);
@@ -165,7 +191,7 @@ export abstract class Bundler extends MastraBundler {
     return inputOptions;
   }
 
-  async getToolsInputOptions(toolsPaths: string[]) {
+  async getToolsInputOptions(toolsPaths: (string | string[])[]) {
     const inputs: Record<string, string> = {};
 
     for (const toolPath of toolsPaths) {
@@ -201,10 +227,19 @@ export abstract class Bundler extends MastraBundler {
     serverFile: string,
     mastraEntryFile: string,
     outputDirectory: string,
-    toolsPaths: string[] = [],
+    toolsPaths: (string | string[])[] = [],
     bundleLocation: string = join(outputDirectory, this.outputDir),
   ): Promise<void> {
     this.logger.info('Start bundling Mastra');
+
+    let sourcemap = false;
+
+    try {
+      const bundlerOptions = await getBundlerOptions(mastraEntryFile, outputDirectory);
+      sourcemap = !!bundlerOptions?.sourcemap;
+    } catch (error) {
+      this.logger.debug('Failed to get bundler options, sourcemap will be disabled', { error });
+    }
 
     let analyzedBundleInfo;
     try {
@@ -215,6 +250,7 @@ export abstract class Bundler extends MastraBundler {
         join(outputDirectory, this.analyzeOutputDir),
         'node',
         this.logger,
+        sourcemap,
       );
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
@@ -232,7 +268,8 @@ export abstract class Bundler extends MastraBundler {
     let externalDependencies: string[];
     try {
       const result = await writeTelemetryConfig(mastraEntryFile, join(outputDirectory, this.outputDir));
-      externalDependencies = result.externalDependencies;
+
+      externalDependencies = result?.externalDependencies ?? [];
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       throw new MastraError(
@@ -246,23 +283,55 @@ export abstract class Bundler extends MastraBundler {
       );
     }
 
+    const mastraFolder = dirname(mastraEntryFile);
+
+    const fileService = new FileService();
+    const customInstrumentation = fileService.getFirstExistingFileOrUndefined([
+      join(mastraFolder, 'instrumentation.js'),
+      join(mastraFolder, 'instrumentation.ts'),
+      join(mastraFolder, 'instrumentation.mjs'),
+    ]);
+
+    try {
+      if (customInstrumentation) {
+        const result = await writeCustomInstrumentation(customInstrumentation, join(outputDirectory, this.outputDir), {
+          sourcemap,
+        });
+        externalDependencies = [...externalDependencies, ...result.externalDependencies];
+        await this.writeInstrumentationFile(join(outputDirectory, this.outputDir), customInstrumentation);
+      } else {
+        await this.writeInstrumentationFile(join(outputDirectory, this.outputDir));
+      }
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new MastraError(
+        {
+          id: 'DEPLOYER_BUNDLER_INSTRUMENTATION_FILE_FAILED',
+          text: `Failed to write instrumentation file: ${message}, ${customInstrumentation ? ` Found custom instrumentation file: ${customInstrumentation}` : ''}`,
+          domain: ErrorDomain.DEPLOYER,
+          category: ErrorCategory.SYSTEM,
+        },
+        error,
+      );
+    }
+
     const dependenciesToInstall = new Map<string, string>();
+
     // Add extenal dependencies from telemetry file
     for (const external of externalDependencies) {
       dependenciesToInstall.set(external, 'latest');
     }
 
-    const workspaceMap = await createWorkspacePackageMap();
     const workspaceDependencies = new Set<string>();
     for (const dep of analyzedBundleInfo.externalDependencies) {
       try {
-        const pkgPath = resolveFrom(mastraEntryFile, `${dep}/package.json`);
-        const pkg = await readJSON(pkgPath);
-
-        if (workspaceMap.has(pkg.name)) {
-          workspaceDependencies.add(pkg.name);
+        if (analyzedBundleInfo.workspaceMap.has(dep)) {
+          workspaceDependencies.add(dep);
           continue;
         }
+
+        const rootPath = await getPackageRootPath(dep);
+        const pkg = await readJSON(`${rootPath}/package.json`);
 
         dependenciesToInstall.set(dep, pkg.version);
       } catch {
@@ -274,7 +343,7 @@ export abstract class Bundler extends MastraBundler {
     if (workspaceDependencies.size > 0) {
       try {
         const result = collectTransitiveWorkspaceDependencies({
-          workspaceMap,
+          workspaceMap: analyzedBundleInfo.workspaceMap,
           initialDependencies: workspaceDependencies,
           logger: this.logger,
         });
@@ -286,7 +355,7 @@ export abstract class Bundler extends MastraBundler {
         });
 
         await packWorkspaceDependencies({
-          workspaceMap,
+          workspaceMap: analyzedBundleInfo.workspaceMap,
           usedWorkspacePackages: result.usedWorkspacePackages,
           bundleOutputDir: join(outputDirectory, this.outputDir),
           logger: this.logger,
@@ -306,7 +375,6 @@ export abstract class Bundler extends MastraBundler {
 
     try {
       await this.writePackageJson(join(outputDirectory, this.outputDir), dependenciesToInstall, resolutions);
-      await this.writeInstrumentationFile(join(outputDirectory, this.outputDir));
 
       this.logger.info('Bundling Mastra application');
       const inputOptions: InputOptions = await this.getBundlerOptions(
@@ -314,6 +382,7 @@ export abstract class Bundler extends MastraBundler {
         mastraEntryFile,
         analyzedBundleInfo,
         toolsPaths,
+        sourcemap,
       );
 
       const bundler = await this.createBundler(
@@ -336,20 +405,37 @@ export abstract class Bundler extends MastraBundler {
           manualChunks: {
             mastra: ['#mastra'],
           },
+          sourcemap,
         },
       );
 
       await bundler.write();
-      const toolsInputOptions = Array.from(Object.keys(inputOptions.input || {}))
+      const toolImports: string[] = [];
+      const toolsExports: string[] = [];
+      Array.from(Object.keys(inputOptions.input || {}))
         .filter(key => key.startsWith('tools/'))
-        .map(key => `./${key}.mjs`);
+        .forEach((key, index) => {
+          const toolExport = `tool${index}`;
+          toolImports.push(`import * as ${toolExport} from './${key}.mjs';`);
+          toolsExports.push(toolExport);
+        });
 
-      await writeFile(join(bundleLocation, 'tools.mjs'), `export const tools = ${JSON.stringify(toolsInputOptions)};`);
+      await writeFile(
+        join(bundleLocation, 'tools.mjs'),
+        `${toolImports.join('\n')}
+
+export const tools = [${toolsExports.join(', ')}]`,
+      );
       this.logger.info('Bundling Mastra done');
 
       this.logger.info('Copying public files');
       await this.copyPublic(dirname(mastraEntryFile), outputDirectory);
       this.logger.info('Done copying public files');
+
+      this.logger.info('Copying .npmrc file');
+      await this.copyDOTNPMRC({ outputDirectory });
+
+      this.logger.info('Done copying .npmrc file');
 
       this.logger.info('Installing dependencies');
       await this.installDependencies(outputDirectory);
@@ -369,7 +455,7 @@ export abstract class Bundler extends MastraBundler {
     }
   }
 
-  async lint(_entryFile: string, _outputDirectory: string, toolsPaths: string[]): Promise<void> {
+  async lint(_entryFile: string, _outputDirectory: string, toolsPaths: (string | string[])[]): Promise<void> {
     const toolsInputOptions = await this.getToolsInputOptions(toolsPaths);
     const toolsLength = Object.keys(toolsInputOptions).length;
     if (toolsLength > 0) {
