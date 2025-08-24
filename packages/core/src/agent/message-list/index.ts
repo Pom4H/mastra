@@ -558,7 +558,8 @@ export class MessageList {
         ? m.content.content
         : m.content.parts.reduce((prev, part) => {
             if (part.type === `text`) {
-              return prev + part.text;
+              // return only the last text part like AI SDK does
+              return part.text;
             }
             return prev;
           }, '');
